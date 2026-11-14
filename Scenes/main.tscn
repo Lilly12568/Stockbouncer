@@ -191,4 +191,3 @@ shape = SubResource("BoxShape3D_odlsx")
 
 [connection signal="input_event" from="CameraPositions/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="story_timer" to="." method="_on_story_timer_timeout"]

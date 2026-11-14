@@ -2,6 +2,7 @@ extends Node3D
 
 var rng = RandomNumberGenerator.new()
 
+var counter = 0
 
 var companies = {
 	"tech": {
@@ -189,7 +190,10 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_timer_timeout() -> void:
+	var blocked_stocks = tick_stories()
 	for stock in stocks:
+		if stock in blocked_stocks:
+			continue
 		var add = rng.randf_range(-7.5, 7.5)
 		var mvmt = ""
 		if stocks[stock] + rng.randf_range(-7.5, 7.5) > 0:
@@ -209,27 +213,42 @@ func _on_timer_timeout() -> void:
 		prnt += stock + ": " + str(stocks[stock]) + "\n"
 	#print(prnt)
 
-func _on_story_timer_timeout() -> void:
-	var sngle = stories.keys()[rng.randi_range(0, len(stories)-1)]
-	var cat = stories[sngle].keys()[rng.randi_range(0, len(stories[sngle])-1)]
-	var company = companies[cat].keys()[rng.randi_range(0, len(companies[cat])-1)]
-	var story_type = stories[sngle][cat].keys()[rng.randi_range(0, len(stories[sngle][cat])-1)]
-	var percentage = 0
-	if story_type == "good":
-		percentage = rng.randi_range(0,15)
-	elif story_type == "bad":
-		percentage = rng.randi_range(-15,0)
+func tick_stories() -> Array:
+	var blocked_stocks = []
+	if counter >= 5:
+		counter = 0
+		var sngle = stories.keys()[rng.randi_range(0, len(stories)-1)]
+		var cat = stories[sngle].keys()[rng.randi_range(0, len(stories[sngle])-1)]
+		var company = companies[cat].keys()[rng.randi_range(0, len(companies[cat])-1)]
+		var story_type = stories[sngle][cat].keys()[rng.randi_range(0, len(stories[sngle][cat])-1)]
+		var percentage = 0
+		if story_type == "good":
+			percentage = rng.randi_range(0,15)
+		elif story_type == "bad":
+			percentage = rng.randi_range(-15,0)
+		else:
+			percentage = rng.randi_range(-15, 15)
+		var story = [stories[sngle][cat][story_type][rng.randi_range(0, len(stories[sngle][cat][story_type])-1)], sngle, cat, company, percentage, 5]
+		print(story)
+		stories_shown["saveable"].append(story)
 	else:
-		percentage = rng.randi_range(-15, 15)
-	var story = [stories[sngle][cat][story_type][rng.randi_range(0, len(stories[sngle][cat][story_type])-1)].replace("%c", company).replace("%s", companies[cat][company]).replace("%p", str(percentage)+"%"), sngle, cat, company, percentage]
-	print(story)
-	stories_shown["saveable"].append(story)
-	if sngle == "single":
-		print(stocks[companies[cat][company]])
-		stocks[companies[cat][company]] += stocks[companies[cat][company]] * (float(percentage) / 100)
-		print(stocks[companies[cat][company]])
-	else:
-		for stock in companies[cat].values():
-			print(stock + ": " + str(stocks[stock]))
-			stocks[stock] += stocks[stock] * (float(percentage) / 100)
-			print(stock + ": " + str(stocks[stock]))
+		counter += 1
+	for stry in stories_shown["saveable"]:
+		if stry[6] > 0:
+			stry[6] -= 1
+		else:
+			stories_shown["saveable"].erase(stry)
+			if stry[1] == "single":
+				print(stocks[companies[stry[2]][stry[3]]])
+				stocks[companies[stry[2]][stry[3]]] += stocks[companies[stry[2]][stry[3]]] * (float(stry[4]) / 100)
+				print(stocks[companies[stry[2]][stry[3]]])
+				blocked_stocks.append(companies[stry[2]][stry[3]])
+				history[companies[stry[2]][stry[3]]].append([stocks[companies[stry[2]][stry[3]]], "up" if stry[4] > 0 else "down"])
+			else:
+				for stock in companies[stry[2]].values():
+					print(stock + ": " + str(stocks[stock]))
+					stocks[stock] += stocks[stock] * (float(stry[4]) / 100)
+					print(stock + ": " + str(stocks[stock]))
+					blocked_stocks.append(stock)
+					history[stock].append([stocks[stock], "up" if stry[4] > 0 else "down"])
+	return blocked_stocks
