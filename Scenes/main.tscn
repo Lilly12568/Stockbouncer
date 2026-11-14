@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://ctknp85nriwbh" path="res://Scenes/control.gd" id="8_344ge"]
 [ext_resource type="ArrayMesh" uid="uid://b0pgmaa0m27y5" path="res://Meshes/Mouse/InsiderTradingGame_Mouse.fbx" id="9_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://biribdsd6iygm" path="res://Scenes/monitor_template.tscn" id="10_hptm8"]
+[ext_resource type="Script" uid="uid://b0g10rx14m4hp" path="res://Scenes/monitor_template_1.gd" id="11_d1ilt"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
@@ -94,6 +95,7 @@ mesh = ExtResource("9_ynf5e")
 
 [node name="MonitorTemplate" parent="." unique_id=1320213197 instance=ExtResource("10_hptm8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.7068574, 3.2002935, -0.27271783)
+script = ExtResource("11_d1ilt")
 
 [node name="MonitorTemplate2" parent="." unique_id=163909348 instance=ExtResource("10_hptm8")]
 transform = Transform3D(-0.26115605, 0, 0.9652966, 0, 1, 0, -0.9652966, 0, -0.26115605, -1.4308525, 3.322222, 1.1815956)
@@ -104,9 +106,6 @@ transform = Transform3D(-0.26115605, 0, 0.9652966, 0, 1, 0, -0.9652966, 0, -0.26
 [node name="MonitorTemplate4" parent="." unique_id=548838214 instance=ExtResource("10_hptm8")]
 transform = Transform3D(0.020705432, 0, 0.9997856, 0, 1, 0, -0.9997856, 0, 0.020705432, -1.5126243, 2.2258198, -0.070457816)
 
-<<<<<<< Updated upstream
-[connection signal="input_event" from="CameraPositions/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
-=======
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1400720659]
 transform = Transform3D(-0.034899343, 0.17354241, 0.98420787, 0, 0.9848078, -0.1736482, -0.99939084, -0.0060602077, -0.034369145, -0.020271063, 4.377658, -2.9660754)
 
@@ -119,5 +118,4 @@ transform = Transform3D(-0.034899343, 0.17354241, 0.98420787, 0, 0.9848078, -0.1
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=838330231]
 transform = Transform3D(-0.034899343, 0.17354241, 0.98420787, 0, 0.9848078, -0.1736482, -0.99939084, -0.0060602077, -0.034369145, 1.0315149, 2.3443496, -0.044913966)
 
->>>>>>> Stashed changes
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]

@@ -234,8 +234,8 @@ func tick_stories() -> Array:
 	else:
 		counter += 1
 	for stry in stories_shown["saveable"]:
-		if stry[6] > 0:
-			stry[6] -= 1
+		if stry[5] > 0:
+			stry[5] -= 1
 		else:
 			stories_shown["saveable"].erase(stry)
 			if stry[1] == "single":
