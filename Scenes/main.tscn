@@ -27,6 +27,9 @@ size = Vector3(1.3271484, 1.9902344, 0.16137695)
 [sub_resource type="BoxShape3D" id="BoxShape3D_r6c0r"]
 size = Vector3(2.5498047, 0.7909546, 0.48217773)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_odlsx"]
+size = Vector3(0.13742065, 0.09321594, 0.2680664)
+
 [node name="Node3D" type="Node3D" unique_id=1869916815]
 script = ExtResource("1_6bp64")
 
@@ -172,6 +175,19 @@ autostart = true
 [node name="InsiderTradingGameMouse" type="MeshInstance3D" parent="." unique_id=1329808753]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.31751233, 1.5011923, -1.767195)
 mesh = ExtResource("9_ynf5e")
+
+[node name="MonitorButtons" type="Node3D" parent="." unique_id=860145524]
+
+[node name="Area3D" type="Area3D" parent="MonitorButtons" unique_id=69809781]
+transform = Transform3D(0.970952, 0, 0.23927456, 0, 1, 0, -0.23927456, 0, 0.970952, -1.613604, 3.2531965, 1.3372403)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorButtons/Area3D" unique_id=229760293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12577808, -0.23278046, 0.3659684)
+shape = SubResource("BoxShape3D_odlsx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="MonitorButtons/Area3D" unique_id=947982168]
+transform = Transform3D(0.9976904, 0, -0.06792586, 0, 1, 0, 0.06792586, 0, 0.9976904, 0.15042827, -0.2327838, -0.5125264)
+shape = SubResource("BoxShape3D_odlsx")
 
 [connection signal="input_event" from="CameraPositions/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
