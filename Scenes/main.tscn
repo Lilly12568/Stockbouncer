@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://s6t7qw5b1m6f" path="res://wooshsound2.mp3" id="10_b3802"]
 [ext_resource type="PackedScene" uid="uid://biribdsd6iygm" path="res://Scenes/monitor_template.tscn" id="10_hptm8"]
 [ext_resource type="Script" uid="uid://b0g10rx14m4hp" path="res://Scenes/monitor_template_1.gd" id="11_d1ilt"]
+[ext_resource type="AudioStream" uid="uid://eeoql2ahslxu" path="res://gameplaymusic.wav" id="11_u50mg"]
 [ext_resource type="Script" uid="uid://0w5k3v3dj43m" path="res://Scenes/monitor_template_2.gd" id="12_6iyac"]
 [ext_resource type="Script" uid="uid://d4fosq3hmcoep" path="res://Scenes/monitor_template_3.gd" id="13_fdnlq"]
 [ext_resource type="ArrayMesh" uid="uid://bmtkx3pxwobvh" path="res://InsiderTradingGame_Cable2.fbx" id="13_k12tt"]
@@ -95,6 +96,10 @@ volume_db = -40.0
 transform = Transform3D(-0.034899343, 0, -0.9993909, 0.17354241, 0.9848078, -0.0060602077, 0.98420787, -0.1736482, -0.034369145, 0.0075083002, -0.5727488, -0.11733651)
 stream = ExtResource("10_b3802")
 volume_db = -40.0
+
+[node name="GameplayMusic" type="AudioStreamPlayer3D" parent="Player2/Camera3D" unique_id=1905899044]
+stream = ExtResource("11_u50mg")
+autoplay = true
 
 [node name="refresh_stocks" type="Timer" parent="." unique_id=316505965]
 autostart = true

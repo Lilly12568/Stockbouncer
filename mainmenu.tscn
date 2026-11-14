@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bxura3c8l1lvq" path="res://Scenes/stonksbutchill.png" id="1_d2nv2"]
 [ext_resource type="Script" uid="uid://dxyrw87fmgu8g" path="res://mainmenu.gd" id="1_wgsso"]
 [ext_resource type="FontFile" uid="uid://paqvblxxkxp" path="res://Scenes/Panic.ttf" id="2_wgsso"]
+[ext_resource type="AudioStream" uid="uid://drf8jrmjaqfjo" path="res://mainmenumusic.wav" id="4_igs2m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hjb8m"]
 font = ExtResource("2_wgsso")
@@ -49,6 +50,10 @@ offset_bottom = 601.0
 theme_override_fonts/font = ExtResource("2_wgsso")
 theme_override_font_sizes/font_size = 46
 text = "QUIT"
+
+[node name="MainMenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=583583392]
+stream = ExtResource("4_igs2m")
+autoplay = true
 
 [connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]

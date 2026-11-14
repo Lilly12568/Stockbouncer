@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ccvb20p1lyceh"]
+
+[ext_resource type="Script" uid="uid://dfyqdontb8flg" path="res://introsequence.gd" id="1_h3qyj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lfxu0"]
+font_size = 47
+
+[node name="Introsequence" type="Control" unique_id=678262062]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h3qyj")
+
+[node name="TextLabel" type="Label" parent="." unique_id=723371235]
+z_index = 1
+layout_mode = 0
+offset_left = 134.0
+offset_top = 69.0
+offset_right = 683.0
+offset_bottom = 171.0
+text = "Hey kid..."
+label_settings = SubResource("LabelSettings_lfxu0")
+
+[node name="Background" type="ColorRect" parent="." unique_id=18102236]
+layout_mode = 0
+offset_right = 1168.0
+offset_bottom = 659.0
+color = Color(3.6098065e-08, 0.069158524, 0.096017025, 1)
