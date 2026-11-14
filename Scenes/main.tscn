@@ -164,5 +164,10 @@ offset_top = 26.0
 offset_right = 641.0
 offset_bottom = 66.0
 
+[node name="story_timer" type="Timer" parent="." unique_id=1459921805]
+wait_time = 7.5
+autostart = true
+
 [connection signal="input_event" from="CameraPositions/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="story_timer" to="." method="_on_story_timer_timeout"]
