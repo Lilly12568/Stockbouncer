@@ -3,13 +3,13 @@
 importer="ArrayMesh"
 importer_version=1
 type="ArrayMesh"
-uid="uid://bh6on7fwpbktl"
-path="res://.godot/imported/InsiderTradingGame_Desk.fbx-ee74ad1d654da7a9e834ba14f259f855.res"
+uid="uid://b0pgmaa0m27y5"
+path="res://.godot/imported/InsiderTradingGame_Mouse.fbx-6613cc7e2eaf5e50bf8d43509b685d7f.res"
 
 [deps]
 
-source_file="res://InsiderTradingGame_Desk.fbx"
-dest_files=["res://.godot/imported/InsiderTradingGame_Desk.fbx-ee74ad1d654da7a9e834ba14f259f855.res"]
+source_file="res://Meshes/Mouse/InsiderTradingGame_Mouse.fbx"
+dest_files=["res://.godot/imported/InsiderTradingGame_Mouse.fbx-6613cc7e2eaf5e50bf8d43509b685d7f.res"]
 
 [params]
 
@@ -19,7 +19,7 @@ nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false
 array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
-nodes/root_scale=50.0
+nodes/root_scale=10.0
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true

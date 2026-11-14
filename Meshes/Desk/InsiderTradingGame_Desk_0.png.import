@@ -2,23 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cswjg5pbms3tv"
-path="res://.godot/imported/InsiderTradingGame_Desk_2.png-e39a63e2378db1ccd0aeb853301242ea.ctex"
+uid="uid://bex2w03kow4a5"
+path.s3tc="res://.godot/imported/InsiderTradingGame_Desk_0.png-4e25a46ad2506978f066d788d62daf4a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
-"md5": "9fbe72a64b869777140c609156202743"
+"md5": "c79c7789681cb2268d24448dee488627"
 }
 
 [deps]
 
-source_file="res://InsiderTradingGame_Desk_2.png"
-dest_files=["res://.godot/imported/InsiderTradingGame_Desk_2.png-e39a63e2378db1ccd0aeb853301242ea.ctex"]
+source_file="res://Meshes/Desk/InsiderTradingGame_Desk_0.png"
+dest_files=["res://.godot/imported/InsiderTradingGame_Desk_0.png-4e25a46ad2506978f066d788d62daf4a.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -6,8 +6,9 @@
 [ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="4_jjvhh"]
 [ext_resource type="ArrayMesh" uid="uid://dp64u681rdni6" path="res://Meshes/Monitors/InsiderTradingGame_Monitor_Large.fbx" id="5_kry3j"]
 [ext_resource type="Script" uid="uid://cg1xcrc5ym7d8" path="res://Scenes/camera_3d.gd" id="6_6bp64"]
-[ext_resource type="ArrayMesh" uid="uid://bh6on7fwpbktl" path="res://InsiderTradingGame_Desk.fbx" id="6_21xkr"]
+[ext_resource type="ArrayMesh" uid="uid://bh6on7fwpbktl" path="res://Meshes/Desk/InsiderTradingGame_Desk.fbx" id="6_21xkr"]
 [ext_resource type="Script" uid="uid://ctknp85nriwbh" path="res://Scenes/control.gd" id="8_344ge"]
+[ext_resource type="ArrayMesh" uid="uid://b0pgmaa0m27y5" path="res://Meshes/Mouse/InsiderTradingGame_Mouse.fbx" id="9_ynf5e"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
@@ -167,6 +168,10 @@ offset_bottom = 66.0
 
 [node name="story_timer" type="Timer" parent="." unique_id=1459921805]
 autostart = true
+
+[node name="InsiderTradingGameMouse" type="MeshInstance3D" parent="." unique_id=1329808753]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.31751233, 1.5011923, -1.767195)
+mesh = ExtResource("9_ynf5e")
 
 [connection signal="input_event" from="CameraPositions/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
