@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1pcsbs1mhrsg"]
+
+[ext_resource type="Texture2D" uid="uid://c761td3awt6ju" path="res://Meshes/Speaker/InsiderTradingGame_Speakers_BaseColor.png" id="1_80205"]
+[ext_resource type="Texture2D" uid="uid://b78hkg60djh5l" path="res://Meshes/Speaker/InsiderTradingGame_Speakers_Normal.png" id="2_ubafa"]
+[ext_resource type="Texture2D" uid="uid://fax6py2v0mxv" path="res://Meshes/Speaker/InsiderTradingGame_Speakers_Roughness.png" id="3_kiodh"]
+
+[resource]
+albedo_texture = ExtResource("1_80205")
+roughness_texture = ExtResource("3_kiodh")
+normal_enabled = true
+normal_texture = ExtResource("2_ubafa")

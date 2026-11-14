@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cc108yh6s05ht"]
+
+[ext_resource type="Script" uid="uid://rodacxw58p2a" path="res://Scripts/main.gd" id="1_8gbba"]
+[ext_resource type="Material" uid="uid://1pcsbs1mhrsg" path="res://Meshes/Speaker/M_Speaker.tres" id="2_jjvhh"]
+[ext_resource type="ArrayMesh" uid="uid://dntvowk5u7fhx" path="res://Meshes/Speaker/InsiderTradingGame_Speaker.fbx" id="3_kry3j"]
+[ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="4_jjvhh"]
+[ext_resource type="ArrayMesh" uid="uid://dp64u681rdni6" path="res://Meshes/Monitors/InsiderTradingGame_Monitor_Large.fbx" id="5_kry3j"]
+[ext_resource type="ArrayMesh" uid="uid://bh6on7fwpbktl" path="res://InsiderTradingGame_Desk.fbx" id="6_21xkr"]
+[ext_resource type="Script" uid="uid://nvpmfqmxerxl" path="res://Scenes/camera_positions.gd" id="7_6bp64"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hjb8m"]
+size = Vector3(0.16003418, 6.137024, 9.473511)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r6c0r"]
+size = Vector3(8.749756, 0.30773926, 8.913086)
+
+[node name="Node3D" type="Node3D" unique_id=1869916815]
+script = ExtResource("1_8gbba")
+
+[node name="InsiderTradingGameSpeaker" type="MeshInstance3D" parent="." unique_id=1667637689]
+transform = Transform3D(0.34881833, -0.19844814, -8.674443e-09, 0, -1.7542154e-08, 0.40131772, -0.19844814, -0.34881833, -1.5247334e-08, -1.0294219, 1.6788137, 2.1362886)
+material_override = ExtResource("2_jjvhh")
+mesh = ExtResource("3_kry3j")
+
+[node name="InsiderTradingGameSpeaker2" type="MeshInstance3D" parent="." unique_id=153154736]
+transform = Transform3D(0.30741554, 0.25797594, 1.1276487e-08, -7.050294e-16, -1.7542156e-08, 0.40131772, 0.25797594, -0.30741554, -1.343756e-08, -1.4752885, 1.678813, -1.0048195)
+material_override = ExtResource("2_jjvhh")
+mesh = ExtResource("3_kry3j")
+
+[node name="InsiderTradingGameMonitor" type="MeshInstance3D" parent="." unique_id=1606067979]
+transform = Transform3D(0.97919965, 0, 0.202899, 0, 1, 0, -0.202899, 0, 0.97919965, -1.4873388, 2.2905731, 1.2335362)
+mesh = ExtResource("4_jjvhh")
+
+[node name="InsiderTradingGameMonitor4" type="MeshInstance3D" parent="." unique_id=253192296]
+transform = Transform3D(0.97919965, 0, 0.202899, 0, 1, 0, -0.202899, 0, 0.97919965, -1.4873388, 3.3415709, 1.2335362)
+mesh = ExtResource("4_jjvhh")
+
+[node name="InsiderTradingGameMonitor5" type="MeshInstance3D" parent="." unique_id=1291020394]
+transform = Transform3D(0.99734706, 0, 0.07279456, 0, 1, 0, -0.07279456, 0, 0.99734706, -1.6702092, 3.2540357, -0.29820085)
+mesh = ExtResource("4_jjvhh")
+
+[node name="InsiderTradingGameMonitor3" type="MeshInstance3D" parent="." unique_id=1437777909]
+transform = Transform3D(0.9978976, 0, 0.064811766, 0, 1, 0, -0.064811766, 0, 0.9978976, -1.6353723, 2.224994, -0.26933488)
+mesh = ExtResource("4_jjvhh")
+
+[node name="InsiderTradingGameMonitor2" type="MeshInstance3D" parent="." unique_id=1460953498]
+transform = Transform3D(1.2029198, 0.75209045, -0.045775834, 0.02634782, 0.044194266, 1.418487, 0.7530218, -1.2029784, 0.023492843, -1.3174031, 2.6241982, -1.7412808)
+mesh = ExtResource("4_jjvhh")
+
+[node name="InsiderTradingGameMonitorLarge" type="MeshInstance3D" parent="." unique_id=956288831]
+transform = Transform3D(0.17281933, 2.8087719e-08, -0.64257205, 0.64257205, -7.554172e-09, 0.17281933, -1.0376178e-15, -0.6654062, -2.9085829e-08, 0.1092605, 1.654882, -0.015014768)
+mesh = ExtResource("5_kry3j")
+
+[node name="Player" type="MeshInstance3D" parent="." unique_id=2034706867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4180007, 0, 0.5713921)
+mesh = SubResource("CylinderMesh_lfxu0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2081144064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8781234, 2.568512, 0.28912973)
+mesh = SubResource("BoxMesh_hjb8m")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=137130169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1820068, -0.57945836, 0)
+mesh = SubResource("BoxMesh_r6c0r")
+
+[node name="InsiderTradingGameDesk" type="MeshInstance3D" parent="." unique_id=11087605]
+transform = Transform3D(1.1776547, 0, 0, 0, -5.1476924e-08, 1.1776547, 0, -1.1776547, -5.1476924e-08, -0.6414285, 0.9283364, -0.112641335)
+mesh = ExtResource("6_21xkr")
+
+[node name="Player2" type="Node3D" parent="." unique_id=970203081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3917657, 1.6966377, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player2" unique_id=693597734]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.21514177, 0.5436722, 0)
+current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Player2/Camera3D" unique_id=1400720659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.021056, 1.8404675, -1.8706868)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Player2/Camera3D" unique_id=254783192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4894545, 1.8404675, -2.155612)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Player2/Camera3D" unique_id=1669079586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10610821, 2.2570844, 0.5133095)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Player2/Camera3D" unique_id=838330231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06496742, 0.0028762817, -0.5828284)
+
+[node name="CameraPositions" type="Node3D" parent="." unique_id=1992656002]
+script = ExtResource("7_6bp64")
+
+[node name="NewsFeed" type="Node3D" parent="CameraPositions" unique_id=1996553602]
+transform = Transform3D(0.73160726, 0, -0.6817264, 0, 1, 0, 0.6817264, 0, 0.73160726, -0.44143897, 2.7136488, -1.1768208)
