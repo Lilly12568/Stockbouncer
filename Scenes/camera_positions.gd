@@ -126,12 +126,16 @@ var story_saved = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+<<<<<<< HEAD:main.gd
 	for cat in companies:
 		for cmp in companies[cat]:
 			stocks[companies[cat][cmp]] = rng.randf_range(100, 1000)
 			history[companies[cat][cmp]] = [stocks[companies[cat][cmp]]]
 	print(stocks)
 	print(history)
+=======
+	pass # Replace with function body.
+>>>>>>> a1df4fb804fe059a581157eadcb0ac1034587f34:Scenes/camera_positions.gd
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
