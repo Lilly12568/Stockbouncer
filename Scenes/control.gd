@@ -14,7 +14,6 @@ func _ready():
 
 
 func _process(_delta):
-	# Show indicator whenever returning is available
 	indicator.visible = camera.can_return
 
 

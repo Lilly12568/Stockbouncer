@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://biribdsd6iygm"]
+
+[ext_resource type="Script" uid="uid://by6y7wxnwybch" path="res://Scenes/monitor_template.gd" id="1_7ri03"]
+[ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="1_ld40p"]
+[ext_resource type="Material" uid="uid://bnieva1vfiwvm" path="res://new_standard_material_3d.tres" id="3_63ioy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_odlsx"]
+size = Vector3(0.13742065, 0.09321594, 0.2680664)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lfxu0"]
+size = Vector3(0.04045105, 0.939209, 1.5087891)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hjb8m"]
+size = Vector2(0.94, 1.41)
+
+[sub_resource type="SphereMesh" id="SphereMesh_hjb8m"]
+radius = 0.015
+height = 0.03
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r6c0r"]
+size = Vector2(0.005, 0.08)
+
+[node name="MonitorTemplate" type="Node3D" unique_id=1320213197]
+script = ExtResource("1_7ri03")
+
+[node name="MonitorButtons" type="Area3D" parent="." unique_id=483335716]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="BuyButton" type="CollisionShape3D" parent="MonitorButtons" unique_id=2145152118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018982768, -0.3358665, 0.3659684)
+shape = SubResource("BoxShape3D_odlsx")
+
+[node name="SellButton" type="CollisionShape3D" parent="MonitorButtons" unique_id=1530540836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019, -0.33608603, -0.366)
+shape = SubResource("BoxShape3D_odlsx")
+
+[node name="MonitorCollider" type="Area3D" parent="." unique_id=181928770]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="MonitorCollider" type="CollisionShape3D" parent="MonitorCollider" unique_id=2004849164]
+transform = Transform3D(1, 0, -5.5879354e-08, 0, 1, 0, 5.5879354e-08, 0, 1, 0.051063538, 0, 2.8533975e-09)
+shape = SubResource("BoxShape3D_lfxu0")
+
+[node name="MonitorMesh" type="MeshInstance3D" parent="." unique_id=2021709276]
+transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.3711392e-08, 0, 0, 0)
+mesh = ExtResource("1_ld40p")
+
+[node name="Screen" type="MeshInstance3D" parent="." unique_id=1281633472]
+transform = Transform3D(1.9106857e-15, -4.3711392e-08, -1.0000001, -1, -4.371139e-08, 0, -4.3711392e-08, 1.0000001, -4.3711392e-08, 0.00015544744, 0.0009454474, 0.032969892)
+mesh = SubResource("PlaneMesh_hjb8m")
+
+[node name="Dot" type="MeshInstance3D" parent="Screen" unique_id=784752588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0587912e-22, 0, 0.6351124)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot2" type="MeshInstance3D" parent="Screen" unique_id=379908571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2573145e-22, 2.220446e-16, 0.5474378)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot3" type="MeshInstance3D" parent="Screen" unique_id=1725397078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9261674e-23, 8.881784e-16, 0.45085216)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot4" type="MeshInstance3D" parent="Screen" unique_id=1367636824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9261674e-23, 1.5543122e-15, 0.3549642)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot5" type="MeshInstance3D" parent="Screen" unique_id=1819900104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1249656e-22, 1.3322676e-15, 0.26478058)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot6" type="MeshInstance3D" parent="Screen" unique_id=76052242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.264423e-23, 1.9984014e-15, 0.18142086)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot7" type="MeshInstance3D" parent="Screen" unique_id=824599741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.6026784e-23, 1.8873791e-15, 0.08699286)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot8" type="MeshInstance3D" parent="Screen" unique_id=797463140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2791894e-23, 1.9984014e-15, -0.0057622194)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot9" type="MeshInstance3D" parent="Screen" unique_id=878913169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1211365e-23, 1.9984014e-15, -0.08485476)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot10" type="MeshInstance3D" parent="Screen" unique_id=1917293434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9557004e-23, 2.220446e-15, -0.16655198)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot11" type="MeshInstance3D" parent="Screen" unique_id=679313182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.293956e-23, 2.6645353e-15, -0.2618056)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot12" type="MeshInstance3D" parent="Screen" unique_id=2053919925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.293956e-23, 2.8865799e-15, -0.3465735)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot13" type="MeshInstance3D" parent="Screen" unique_id=106707337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.970467e-23, 3.1086245e-15, -0.43975356)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot14" type="MeshInstance3D" parent="Screen" unique_id=752688681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6645353e-15, -0.5412588)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="Dot15" type="MeshInstance3D" parent="Screen" unique_id=1782447727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9852335e-23, 3.5527137e-15, -0.6357375)
+mesh = SubResource("SphereMesh_hjb8m")
+
+[node name="ConnectingLine" type="MeshInstance3D" parent="Screen" unique_id=600089983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877788e-17, 0.004854433, 0.5909926)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine2" type="MeshInstance3D" parent="Screen" unique_id=1547517869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877801e-17, 0.004854433, 0.50051147)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine3" type="MeshInstance3D" parent="Screen" unique_id=186841991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877814e-17, 0.004854433, 0.40402335)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine4" type="MeshInstance3D" parent="Screen" unique_id=762429491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877828e-17, 0.004854433, 0.3085843)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine5" type="MeshInstance3D" parent="Screen" unique_id=946447139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877786e-17, 0.004854433, 0.22412789)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine6" type="MeshInstance3D" parent="Screen" unique_id=713625903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877801e-17, 0.004854433, 0.1357779)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine7" type="MeshInstance3D" parent="Screen" unique_id=265334804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877814e-17, 0.004854433, 0.042062074)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine8" type="MeshInstance3D" parent="Screen" unique_id=578248219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877824e-17, 0.004854433, -0.04832481)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine9" type="MeshInstance3D" parent="Screen" unique_id=421721520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877837e-17, 0.004854433, -0.12663567)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine10" type="MeshInstance3D" parent="Screen" unique_id=1179740115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877837e-17, 0.004854433, -0.21198152)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine11" type="MeshInstance3D" parent="Screen" unique_id=903620003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877837e-17, 0.004854433, -0.30348262)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine12" type="MeshInstance3D" parent="Screen" unique_id=206786802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877837e-17, 0.004854433, -0.39301944)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine13" type="MeshInstance3D" parent="Screen" unique_id=304801119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.387785e-17, 0.004854433, -0.48914576)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="ConnectingLine14" type="MeshInstance3D" parent="Screen" unique_id=1204869374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877877e-17, 0.004854433, -0.58548045)
+mesh = SubResource("PlaneMesh_r6c0r")
+surface_material_override/0 = ExtResource("3_63ioy")

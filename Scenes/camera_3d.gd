@@ -1,7 +1,6 @@
 
 extends Camera3D
 
-@export var clickable_areas: Array[Area3D]
 @export var lerp_speed: float = 3.0
 @export var z_offset: float = 0.0
 
@@ -20,10 +19,8 @@ func _ready():
 	original_position = global_position
 	original_rotation = global_transform.basis.get_rotation_quaternion()
 
-	# Connect all clickable areas
-	for area in clickable_areas:
-		if area:
-			area.input_event.connect(_on_area_input_event.bind(area))
+	# Register camera so monitors can find it
+	add_to_group("player_camera")
 
 
 func _process(delta):
@@ -53,24 +50,9 @@ func _process(delta):
 			moving = false
 
 
-func _on_area_input_event(
-	camera: Node,
-	event: InputEvent,
-	event_position: Vector3,
-	normal: Vector3,
-	shape_idx: int,
-	clicked_area: Area3D
-) -> void:
-
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			LerpCamToPos(clicked_area)
-
-
-func LerpCamToPos(area: Area3D):
-	target_position = area.global_position + area.global_transform.basis.z * z_offset
-
-	target_rotation = area.global_transform.basis.get_rotation_quaternion()
+func LerpCamToPos(target: Node3D):
+	target_position = target.global_position + target.global_basis.z * z_offset
+	target_rotation = target.global_basis.get_rotation_quaternion()
 
 	returning = false
 	can_return = true
