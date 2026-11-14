@@ -5,9 +5,6 @@
 [ext_resource type="Material" uid="uid://cdig1ufl2a68q" path="res://invisiblematerial.tres" id="3_0j5qj"]
 [ext_resource type="Material" uid="uid://bnieva1vfiwvm" path="res://new_standard_material_3d.tres" id="3_63ioy"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_odlsx"]
-size = Vector3(0.13742065, 0.09321594, 0.2680664)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_lfxu0"]
 size = Vector3(0.04045105, 0.939209, 1.5087891)
 
@@ -21,19 +18,20 @@ height = 0.03
 [sub_resource type="PlaneMesh" id="PlaneMesh_r6c0r"]
 size = Vector2(0.005, 0.08)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hjb8m"]
+size = Vector3(0.20605469, 0.115234375, 0.21289063)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r6c0r"]
+size = Vector3(0.256958, 0.093688965, 0.22595215)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2mn5"]
+size = Vector3(0.117263794, 0.08984375, 0.119506836)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucim2"]
+size = Vector3(0.08955383, 0.08306885, 0.115234375)
+
 [node name="MonitorTemplate" type="Node3D" unique_id=1320213197]
 script = ExtResource("1_7ri03")
-
-[node name="MonitorButtons" type="Area3D" parent="." unique_id=483335716]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
-
-[node name="BuyButton" type="CollisionShape3D" parent="MonitorButtons" unique_id=2145152118]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018982768, -0.3358665, 0.3659684)
-shape = SubResource("BoxShape3D_odlsx")
-
-[node name="SellButton" type="CollisionShape3D" parent="MonitorButtons" unique_id=1530540836]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019, -0.33608603, -0.366)
-shape = SubResource("BoxShape3D_odlsx")
 
 [node name="MonitorCollider" type="Area3D" parent="." unique_id=181928770]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -185,3 +183,27 @@ surface_material_override/0 = ExtResource("3_63ioy")
 transform = Transform3D(1.9106848e-15, -1, -4.3711363e-08, -4.3711363e-08, -4.3711367e-08, 0.9999999, -0.9999999, -1.058861e-21, -4.3711363e-08, -0.39664108, 0.019747984, -0.50797623)
 text = "XXXX"
 font_size = 10
+
+[node name="BuyArea" type="Area3D" parent="." unique_id=1550920083]
+
+[node name="BuyButton" type="CollisionShape3D" parent="BuyArea" unique_id=106285915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39697266, -0.31347656, 0)
+shape = SubResource("BoxShape3D_hjb8m")
+
+[node name="SellArea" type="Area3D" parent="." unique_id=1091563934]
+
+[node name="SellButton" type="CollisionShape3D" parent="SellArea" unique_id=732744789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371521, -0.2930603, -0.016784668)
+shape = SubResource("BoxShape3D_r6c0r")
+
+[node name="LeftStockArea" type="Area3D" parent="." unique_id=330540467]
+
+[node name="LeftStockButton" type="CollisionShape3D" parent="LeftStockArea" unique_id=1531584775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35027313, 0.3937683, -0.008483887)
+shape = SubResource("BoxShape3D_g2mn5")
+
+[node name="RightStockArea" type="Area3D" parent="." unique_id=1797109905]
+
+[node name="RightStockButton" type="CollisionShape3D" parent="RightStockArea" unique_id=938962659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63996124, 0.39804077, 0)
+shape = SubResource("BoxShape3D_ucim2")

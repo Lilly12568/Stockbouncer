@@ -16,9 +16,9 @@
 [ext_resource type="Script" uid="uid://b0g10rx14m4hp" path="res://Scenes/monitor_template_1.gd" id="11_d1ilt"]
 [ext_resource type="Script" uid="uid://0w5k3v3dj43m" path="res://Scenes/monitor_template_2.gd" id="12_6iyac"]
 [ext_resource type="Script" uid="uid://d4fosq3hmcoep" path="res://Scenes/monitor_template_3.gd" id="13_fdnlq"]
-[ext_resource type="Script" uid="uid://dh1mpw7kkbytd" path="res://Scenes/monitor_template_4.gd" id="14_jkdf5"]
 [ext_resource type="ArrayMesh" uid="uid://bmtkx3pxwobvh" path="res://InsiderTradingGame_Cable2.fbx" id="13_k12tt"]
 [ext_resource type="ArrayMesh" uid="uid://tgr1nss24f6m" path="res://InsiderTradingGame_Cable3.fbx" id="14_h1bgf"]
+[ext_resource type="Script" uid="uid://dh1mpw7kkbytd" path="res://Scenes/monitor_template_4.gd" id="14_jkdf5"]
 [ext_resource type="ArrayMesh" uid="uid://cw3p855bmcfx6" path="res://InsiderTradingGame_Cable4.fbx" id="15_b3802"]
 [ext_resource type="ArrayMesh" uid="uid://c2mw1uug3rg6" path="res://InsiderTradingGame_Cable.fbx" id="16_fevyy"]
 
