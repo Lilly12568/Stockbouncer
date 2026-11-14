@@ -175,6 +175,8 @@ var stories_saved = []
 
 var stories_shown = {"saveable":[],"read":[]}
 
+var monitors = {"1":"", "2":"", "3":"", "4":""}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for cat in companies:
@@ -196,7 +198,7 @@ func _on_timer_timeout() -> void:
 			continue
 		var add = rng.randf_range(-7.5, 7.5)
 		var mvmt = ""
-		if stocks[stock] + rng.randf_range(-7.5, 7.5) > 0:
+		if stocks[stock] + add > 0 and stocks[stock] + add < 2000:
 			stocks[stock] += add
 			if add > 0.25: mvmt = "up"
 			elif add < -0.25: mvmt = "down"
@@ -238,6 +240,7 @@ func tick_stories() -> Array:
 			stry[5] -= 1
 		else:
 			stories_shown["saveable"].erase(stry)
+			stories_shown["read"].append(stry)
 			if stry[1] == "single":
 				print(stocks[companies[stry[2]][stry[3]]])
 				stocks[companies[stry[2]][stry[3]]] += stocks[companies[stry[2]][stry[3]]] * (float(stry[4]) / 100)

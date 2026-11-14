@@ -14,6 +14,9 @@
 [ext_resource type="AudioStream" uid="uid://s6t7qw5b1m6f" path="res://wooshsound2.mp3" id="10_b3802"]
 [ext_resource type="PackedScene" uid="uid://biribdsd6iygm" path="res://Scenes/monitor_template.tscn" id="10_hptm8"]
 [ext_resource type="Script" uid="uid://b0g10rx14m4hp" path="res://Scenes/monitor_template_1.gd" id="11_d1ilt"]
+[ext_resource type="Script" uid="uid://0w5k3v3dj43m" path="res://Scenes/monitor_template_2.gd" id="12_6iyac"]
+[ext_resource type="Script" uid="uid://d4fosq3hmcoep" path="res://Scenes/monitor_template_3.gd" id="13_fdnlq"]
+[ext_resource type="Script" uid="uid://dh1mpw7kkbytd" path="res://Scenes/monitor_template_4.gd" id="14_jkdf5"]
 [ext_resource type="ArrayMesh" uid="uid://bmtkx3pxwobvh" path="res://InsiderTradingGame_Cable2.fbx" id="13_k12tt"]
 [ext_resource type="ArrayMesh" uid="uid://tgr1nss24f6m" path="res://InsiderTradingGame_Cable3.fbx" id="14_h1bgf"]
 [ext_resource type="ArrayMesh" uid="uid://cw3p855bmcfx6" path="res://InsiderTradingGame_Cable4.fbx" id="15_b3802"]
@@ -133,12 +136,15 @@ script = ExtResource("11_d1ilt")
 
 [node name="MonitorTemplate2" parent="." unique_id=163909348 instance=ExtResource("10_hptm8")]
 transform = Transform3D(-0.26115605, 0, 0.9652966, 0, 1, 0, -0.9652966, 0, -0.26115605, -1.4308525, 3.322222, 1.1815956)
+script = ExtResource("12_6iyac")
 
 [node name="MonitorTemplate3" parent="." unique_id=680070277 instance=ExtResource("10_hptm8")]
 transform = Transform3D(-0.26115605, 0, 0.9652966, 0, 1, 0, -0.9652966, 0, -0.26115605, -1.2855372, 2.2258198, 1.3844674)
+script = ExtResource("13_fdnlq")
 
 [node name="MonitorTemplate4" parent="." unique_id=548838214 instance=ExtResource("10_hptm8")]
 transform = Transform3D(0.020705432, 0, 0.9997856, 0, 1, 0, -0.9997856, 0, 0.020705432, -1.5126243, 2.2258198, -0.070457816)
+script = ExtResource("14_jkdf5")
 
 [node name="InsiderTradingGameCable2" type="MeshInstance3D" parent="." unique_id=183404477]
 transform = Transform3D(0.012596332, -0.25886226, 0.15606344, 0.30183566, 0.019115929, 0.0073455535, -0.016146466, 0.15539965, 0.25906444, -1.4881909, 2.6479506, 1.3539718)

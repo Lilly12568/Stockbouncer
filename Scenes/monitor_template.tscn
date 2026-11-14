@@ -52,7 +52,7 @@ material_override = ExtResource("3_0j5qj")
 mesh = SubResource("PlaneMesh_hjb8m")
 
 [node name="Dot" type="MeshInstance3D" parent="Screen" unique_id=784752588]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0587912e-22, 0, 0.6351124)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.635)
 mesh = SubResource("SphereMesh_hjb8m")
 
 [node name="Dot2" type="MeshInstance3D" parent="Screen" unique_id=379908571]
@@ -68,7 +68,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9261674e-23, 1.5543122e-15
 mesh = SubResource("SphereMesh_hjb8m")
 
 [node name="Dot5" type="MeshInstance3D" parent="Screen" unique_id=1819900104]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1249656e-22, 1.3322676e-15, 0.26478058)
+transform = Transform3D(1, 3.5527137e-15, -2.1175824e-22, -3.5527137e-15, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 0.265)
 mesh = SubResource("SphereMesh_hjb8m")
 
 [node name="Dot6" type="MeshInstance3D" parent="Screen" unique_id=76052242]
@@ -84,7 +84,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2791894e-23, 1.9984014e-15
 mesh = SubResource("SphereMesh_hjb8m")
 
 [node name="Dot9" type="MeshInstance3D" parent="Screen" unique_id=878913169]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1211365e-23, 1.9984014e-15, -0.08485476)
+transform = Transform3D(1, 3.5527137e-15, -2.1175824e-22, -3.5527137e-15, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, -0.085)
 mesh = SubResource("SphereMesh_hjb8m")
 
 [node name="Dot10" type="MeshInstance3D" parent="Screen" unique_id=1917293434]
@@ -180,3 +180,8 @@ surface_material_override/0 = ExtResource("3_63ioy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877877e-17, 0.004854433, -0.58548045)
 mesh = SubResource("PlaneMesh_r6c0r")
 surface_material_override/0 = ExtResource("3_63ioy")
+
+[node name="Label3D" type="Label3D" parent="Screen" unique_id=897470889]
+transform = Transform3D(1.9106848e-15, -1, -4.3711363e-08, -4.3711363e-08, -4.3711367e-08, 0.9999999, -0.9999999, -1.058861e-21, -4.3711363e-08, -0.39664108, 0.019747984, -0.50797623)
+text = "XXXX"
+font_size = 10

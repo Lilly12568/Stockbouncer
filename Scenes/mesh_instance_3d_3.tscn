@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://vhrmyhxn7fa0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n5ylr"]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" unique_id=1698862508]
+mesh = SubResource("BoxMesh_n5ylr")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=432522810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0388999, 0, 0.519059)
+text = "ohthepain"
