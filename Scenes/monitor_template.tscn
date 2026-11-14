@@ -180,9 +180,14 @@ mesh = SubResource("PlaneMesh_r6c0r")
 surface_material_override/0 = ExtResource("3_63ioy")
 
 [node name="Label3D" type="Label3D" parent="Screen" unique_id=897470889]
-transform = Transform3D(1.9106848e-15, -1, -4.3711363e-08, -4.3711363e-08, -4.3711367e-08, 0.9999999, -0.9999999, -1.058861e-21, -4.3711363e-08, -0.39664108, 0.019747984, -0.50797623)
+transform = Transform3D(1.9106848e-15, -1, -4.371136e-08, -4.371136e-08, -4.3711363e-08, 0.9999999, -0.9999999, -1.1435921e-21, -4.371136e-08, -0.39664108, 0.019747984, -0.48720717)
 text = "XXXX"
 font_size = 10
+
+[node name="Label3D2" type="Label3D" parent="Screen" unique_id=224152107]
+transform = Transform3D(-4.3711385e-08, -0.9999999, -2.1316282e-14, 4.3711367e-08, 2.1316282e-14, -0.9999999, 0.9999999, -4.3711385e-08, 4.3711367e-08, -0.4007812, -3.7252903e-08, -0.48918557)
+text = "<         >"
+font_size = 21
 
 [node name="BuyArea" type="Area3D" parent="." unique_id=1550920083]
 
@@ -199,11 +204,14 @@ shape = SubResource("BoxShape3D_r6c0r")
 [node name="LeftStockArea" type="Area3D" parent="." unique_id=330540467]
 
 [node name="LeftStockButton" type="CollisionShape3D" parent="LeftStockArea" unique_id=1531584775]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35027313, 0.3937683, -0.008483887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34678933, 0.3937683, 0.014417276)
 shape = SubResource("BoxShape3D_g2mn5")
 
 [node name="RightStockArea" type="Area3D" parent="." unique_id=1797109905]
 
 [node name="RightStockButton" type="CollisionShape3D" parent="RightStockArea" unique_id=938962659]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63996124, 0.39804077, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6200744, 0.39804077, 0.027433917)
 shape = SubResource("BoxShape3D_ucim2")
+
+[connection signal="input_event" from="LeftStockArea" to="." method="_on_left_input_button_event"]
+[connection signal="input_event" from="RightStockArea" to="." method="_on_right_stock_area_input_event"]

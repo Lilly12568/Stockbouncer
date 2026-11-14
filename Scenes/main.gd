@@ -175,7 +175,9 @@ var stories_saved = []
 
 var stories_shown = {"saveable":[],"read":[]}
 
-var monitors = {"1":"", "2":"", "3":"", "4":""}
+var monitors = {"1":0, "2":null, "3":null, "4":null}
+
+var unlocked = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
