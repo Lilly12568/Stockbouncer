@@ -7,9 +7,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dp64u681rdni6" path="res://Meshes/Monitors/InsiderTradingGame_Monitor_Large.fbx" id="5_kry3j"]
 [ext_resource type="Script" uid="uid://cg1xcrc5ym7d8" path="res://Scenes/camera_3d.gd" id="6_6bp64"]
 [ext_resource type="ArrayMesh" uid="uid://bh6on7fwpbktl" path="res://InsiderTradingGame_Desk.fbx" id="6_21xkr"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_lfxu0"]
-size = Vector3(0.2319336, 0.939209, 1.3945313)
+[ext_resource type="Script" uid="uid://ctknp85nriwbh" path="res://Scenes/control.gd" id="8_344ge"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
@@ -18,6 +16,15 @@ size = Vector3(0.16003418, 6.137024, 9.473511)
 
 [sub_resource type="BoxMesh" id="BoxMesh_r6c0r"]
 size = Vector3(8.749756, 0.30773926, 8.913086)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lfxu0"]
+size = Vector3(1.3310547, 0.939209, 0.16296387)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hjb8m"]
+size = Vector3(1.3271484, 1.9902344, 0.16137695)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r6c0r"]
+size = Vector3(2.5498047, 0.7909546, 0.48217773)
 
 [node name="Node3D" type="Node3D" unique_id=1869916815]
 script = ExtResource("1_6bp64")
@@ -43,12 +50,6 @@ mesh = ExtResource("4_jjvhh")
 [node name="InsiderTradingGameMonitor5" type="MeshInstance3D" parent="." unique_id=1291020394]
 transform = Transform3D(0.99734706, 0, 0.07279456, 0, 1, 0, -0.07279456, 0, 0.99734706, -1.6702092, 3.2540357, -0.29820085)
 mesh = ExtResource("4_jjvhh")
-
-[node name="Area3D" type="Area3D" parent="InsiderTradingGameMonitor5" unique_id=603947444]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="InsiderTradingGameMonitor5/Area3D" unique_id=1377231006]
-transform = Transform3D(0.9999929, 0, 7.4505806e-08, 0, 1, 0, -7.4505806e-08, 0, 0.9999929, -0.039796352, 0, -2.9802322e-08)
-shape = SubResource("BoxShape3D_lfxu0")
 
 [node name="InsiderTradingGameMonitor3" type="MeshInstance3D" parent="." unique_id=1437777909]
 transform = Transform3D(0.9978976, 0, 0.064811766, 0, 1, 0, -0.064811766, 0, 0.9978976, -1.6353723, 2.224994, -0.26933488)
@@ -81,11 +82,12 @@ mesh = ExtResource("6_21xkr")
 [node name="Player2" type="Node3D" parent="." unique_id=970203081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3917657, 1.6966377, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Player2" unique_id=693597734 node_paths=PackedStringArray("target_preset")]
+[node name="Camera3D" type="Camera3D" parent="Player2" unique_id=693597734 node_paths=PackedStringArray("clickable_areas")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.21514177, 0.5436722, 0)
 current = true
 script = ExtResource("6_6bp64")
-target_preset = NodePath("../../CameraPositions/NewsFeed")
+clickable_areas = [NodePath("../../CameraPositions/Area3D"), NodePath("../../CameraPositions/Area3D2"), NodePath("../../CameraPositions/Area3D3"), NodePath("../../CameraPositions/Area3D4"), NodePath("../../CameraPositions/Area3D5"), NodePath("../../CameraPositions/Area3D6")]
+z_offset = 1.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player2/Camera3D" unique_id=1400720659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.021056, 1.8404675, -1.8706868)
@@ -101,10 +103,66 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06496742, 0.0028762817, -0.
 
 [node name="CameraPositions" type="Node3D" parent="." unique_id=1992656002]
 
-[node name="NewsFeed" type="Node3D" parent="CameraPositions" unique_id=1996553602]
-transform = Transform3D(0.008198082, 0, 0.99996626, 0, 1, 0, -0.99996626, 0, 0.008198082, -0.62940836, 3.1703982, -0.20554948)
+[node name="Area3D" type="Area3D" parent="CameraPositions" unique_id=603947444]
+transform = Transform3D(-0.035022832, 0, 0.9993866, 0, 1, 0, -0.9993866, 0, -0.035022832, -1.6702092, 3.2540357, -0.29820085)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPositions/Area3D" unique_id=1377231006]
+transform = Transform3D(1, 0, -5.5879354e-08, 0, 1, 0, 5.5879354e-08, 0, 1, -0.039796382, 0, 0.059143424)
+shape = SubResource("BoxShape3D_lfxu0")
+
+[node name="Area3D2" type="Area3D" parent="CameraPositions" unique_id=2077978467]
+transform = Transform3D(-0.17638084, 0, 0.9843222, 0, 1, 0, -0.9843222, 0, -0.17638084, -1.5260042, 3.3063135, 1.1876718)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPositions/Area3D2" unique_id=439433569]
+transform = Transform3D(1, 0, -5.5879354e-08, 0, 1, 0, 5.5879354e-08, 0, 1, -0.039796382, 0, 0.059143424)
+shape = SubResource("BoxShape3D_lfxu0")
+
+[node name="Area3D3" type="Area3D" parent="CameraPositions" unique_id=393098250]
+transform = Transform3D(-0.2007861, 0, 0.9796355, 0, 1, 0, -0.9796355, 0, -0.2007861, -1.4853762, 2.2864275, 1.253015)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPositions/Area3D3" unique_id=1392085276]
+transform = Transform3D(1, 0, -5.5879354e-08, 0, 1, 0, 5.5879354e-08, 0, 1, -0.039796382, 0, 0.059143424)
+shape = SubResource("BoxShape3D_lfxu0")
+
+[node name="Area3D4" type="Area3D" parent="CameraPositions" unique_id=2002560812]
+transform = Transform3D(-0.0634348, 0, 0.99798673, 0, 1, 0, -0.99798673, 0, -0.0634348, -1.7297486, 2.1380498, -0.31603223)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPositions/Area3D4" unique_id=882128834]
+transform = Transform3D(1, 0, -5.5879354e-08, 0, 1, 0, 5.5879354e-08, 0, 1, -0.039796382, 0, 0.059143424)
+shape = SubResource("BoxShape3D_lfxu0")
+
+[node name="Area3D5" type="Area3D" parent="CameraPositions" unique_id=1906075759]
+transform = Transform3D(0.45180732, 0, 0.89211726, 0, 1, 0, -0.89211726, 0, 0.45180732, -1.3843329, 2.7168093, -1.773346)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPositions/Area3D5" unique_id=140127191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, -0.13378906, 0.09777832)
+shape = SubResource("BoxShape3D_hjb8m")
+
+[node name="Area3D6" type="Area3D" parent="CameraPositions" unique_id=831679741]
+transform = Transform3D(-0.019981932, -0.9559252, 0.2929306, -2.8871e-08, 0.29298815, 0.9561191, -0.9998036, 0.019104999, -0.005854509, 0.03868341, 1.5157733, -0.022006422)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraPositions/Area3D6" unique_id=2147438450]
+transform = Transform3D(1, 2.7753413e-07, -6.938353e-08, 1.9185245e-07, 1, -8.0035534e-10, -4.656613e-10, -2.9496732e-08, 1, 2.9802322e-08, -0.001068145, -3.5762787e-07)
+shape = SubResource("BoxShape3D_r6c0r")
 
 [node name="refresh_stocks" type="Timer" parent="." unique_id=316505965]
 
-[connection signal="input_event" from="InsiderTradingGameMonitor5/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
+[node name="Control" type="Control" parent="." unique_id=1111080794 node_paths=PackedStringArray("camera")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 209.0
+offset_top = 553.0
+offset_right = 886.0
+offset_bottom = 629.0
+script = ExtResource("8_344ge")
+camera = NodePath("../Player2/Camera3D")
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1407529355]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 26.0
+offset_right = 641.0
+offset_bottom = 66.0
+
+[connection signal="input_event" from="CameraPositions/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
