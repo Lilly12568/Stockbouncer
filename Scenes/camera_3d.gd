@@ -4,6 +4,9 @@ extends Camera3D
 @export var lerp_speed: float = 3.0
 @export var z_offset: float = 0.0
 
+@onready var camera_inSound: AudioStreamPlayer3D = $WooshInSound
+@onready var camera_outSound: AudioStreamPlayer3D = $WooshOutSound
+
 var moving = false
 var returning = false
 var can_return = false
@@ -51,6 +54,8 @@ func _process(delta):
 
 
 func LerpCamToPos(target: Node3D):
+	camera_inSound.pitch_scale = RandomNumberGenerator.new().randf_range(0.8, 1.2)
+	camera_inSound.play()
 	target_position = target.global_position + target.global_basis.z * z_offset
 	target_rotation = target.global_basis.get_rotation_quaternion()
 
@@ -66,3 +71,5 @@ func ReturnCam():
 	returning = true
 	moving = true
 	can_return = false
+	camera_outSound.pitch_scale = RandomNumberGenerator.new().randf_range(0.8, 1.2)
+	camera_outSound.play()

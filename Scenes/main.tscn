@@ -9,7 +9,9 @@
 [ext_resource type="Material" uid="uid://bnieva1vfiwvm" path="res://new_standard_material_3d.tres" id="6_6iyac"]
 [ext_resource type="ArrayMesh" uid="uid://bh6on7fwpbktl" path="res://Meshes/Desk/InsiderTradingGame_Desk.fbx" id="6_21xkr"]
 [ext_resource type="Script" uid="uid://ctknp85nriwbh" path="res://Scenes/control.gd" id="8_344ge"]
+[ext_resource type="AudioStream" uid="uid://b7r24hun783si" path="res://wooshsound.mp3" id="9_h1bgf"]
 [ext_resource type="ArrayMesh" uid="uid://b0pgmaa0m27y5" path="res://Meshes/Mouse/InsiderTradingGame_Mouse.fbx" id="9_ynf5e"]
+[ext_resource type="AudioStream" uid="uid://s6t7qw5b1m6f" path="res://wooshsound2.mp3" id="10_b3802"]
 [ext_resource type="PackedScene" uid="uid://biribdsd6iygm" path="res://Scenes/monitor_template.tscn" id="10_hptm8"]
 [ext_resource type="Script" uid="uid://b0g10rx14m4hp" path="res://Scenes/monitor_template_1.gd" id="11_d1ilt"]
 [ext_resource type="ArrayMesh" uid="uid://bmtkx3pxwobvh" path="res://InsiderTradingGame_Cable2.fbx" id="13_k12tt"]
@@ -20,10 +22,10 @@
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hjb8m"]
-size = Vector3(0.16003418, 6.137024, 9.473511)
+size = Vector3(0.16003418, 9.839142, 16.13086)
 
 [sub_resource type="BoxMesh" id="BoxMesh_r6c0r"]
-size = Vector3(8.749756, 0.30773926, 8.913086)
+size = Vector3(8.749756, 0.30773926, 17.376709)
 
 [node name="Node3D" type="Node3D" unique_id=1869916815]
 script = ExtResource("1_6bp64")
@@ -51,7 +53,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4180007, 0, 0.0012354851)
 mesh = SubResource("CylinderMesh_lfxu0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2081144064]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2005496, 2.568512, 0.28912973)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2005496, 4.419571, 0.28912973)
 mesh = SubResource("BoxMesh_hjb8m")
 surface_material_override/0 = ExtResource("6_6iyac")
 
@@ -72,6 +74,16 @@ transform = Transform3D(-0.034899343, 0.17354241, 0.98420787, 0, 0.9848078, -0.1
 current = true
 script = ExtResource("6_6bp64")
 z_offset = 1.0
+
+[node name="WooshInSound" type="AudioStreamPlayer3D" parent="Player2/Camera3D" unique_id=1008215621]
+transform = Transform3D(-0.034899343, 0, -0.9993909, 0.17354241, 0.9848078, -0.0060602077, 0.98420787, -0.1736482, -0.034369145, 0.0075083002, -0.5727488, -0.11733651)
+stream = ExtResource("9_h1bgf")
+volume_db = -40.0
+
+[node name="WooshOutSound" type="AudioStreamPlayer3D" parent="Player2/Camera3D" unique_id=1349719903]
+transform = Transform3D(-0.034899343, 0, -0.9993909, 0.17354241, 0.9848078, -0.0060602077, 0.98420787, -0.1736482, -0.034369145, 0.0075083002, -0.5727488, -0.11733651)
+stream = ExtResource("10_b3802")
+volume_db = -40.0
 
 [node name="refresh_stocks" type="Timer" parent="." unique_id=316505965]
 autostart = true
