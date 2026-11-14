@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 		$Screen/Label3D.text = str(get_parent().unlocked[stock["2"]])
 
 func rotate_left(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and stock["2"] != null:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if stock["2"] == 0:
 				get_parent().monitors["2"] = len(get_parent().unlocked) - 1
@@ -21,7 +21,7 @@ func rotate_left(camera: Node, event: InputEvent, event_position: Vector3, norma
 				get_parent().monitors["2"] -= 1
 
 func rotate_right(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and stock["2"] != null:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if stock["2"] == len(get_parent().unlocked) - 1:
 				get_parent().monitors["2"] = 0
