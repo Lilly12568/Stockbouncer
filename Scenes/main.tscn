@@ -1,12 +1,25 @@
 [gd_scene format=3 uid="uid://cc108yh6s05ht"]
 
-[ext_resource type="Script" uid="uid://rodacxw58p2a" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="Material" uid="uid://1pcsbs1mhrsg" path="res://Meshes/Speaker/M_Speaker.tres" id="2_jjvhh"]
 [ext_resource type="ArrayMesh" uid="uid://dntvowk5u7fhx" path="res://Meshes/Speaker/InsiderTradingGame_Speaker.fbx" id="3_kry3j"]
 [ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="4_jjvhh"]
 [ext_resource type="ArrayMesh" uid="uid://dp64u681rdni6" path="res://Meshes/Monitors/InsiderTradingGame_Monitor_Large.fbx" id="5_kry3j"]
 [ext_resource type="ArrayMesh" uid="uid://bh6on7fwpbktl" path="res://InsiderTradingGame_Desk.fbx" id="6_21xkr"]
 [ext_resource type="Script" uid="uid://nvpmfqmxerxl" path="res://Scenes/camera_positions.gd" id="7_6bp64"]
+
+[sub_resource type="GDScript" id="GDScript_21xkr"]
+script/source = "extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	print(\"hello\")
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
@@ -17,7 +30,7 @@ size = Vector3(0.16003418, 6.137024, 9.473511)
 size = Vector3(8.749756, 0.30773926, 8.913086)
 
 [node name="Node3D" type="Node3D" unique_id=1869916815]
-script = ExtResource("1_8gbba")
+script = SubResource("GDScript_21xkr")
 
 [node name="InsiderTradingGameSpeaker" type="MeshInstance3D" parent="." unique_id=1667637689]
 transform = Transform3D(0.34881833, -0.19844814, -8.674443e-09, 0, -1.7542154e-08, 0.40131772, -0.19844814, -0.34881833, -1.5247334e-08, -1.0294219, 1.6788137, 2.1362886)
