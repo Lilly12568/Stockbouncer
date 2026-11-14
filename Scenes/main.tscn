@@ -21,6 +21,9 @@
 [ext_resource type="Script" uid="uid://dh1mpw7kkbytd" path="res://Scenes/monitor_template_4.gd" id="14_jkdf5"]
 [ext_resource type="ArrayMesh" uid="uid://cw3p855bmcfx6" path="res://InsiderTradingGame_Cable4.fbx" id="15_b3802"]
 [ext_resource type="ArrayMesh" uid="uid://c2mw1uug3rg6" path="res://InsiderTradingGame_Cable.fbx" id="16_fevyy"]
+[ext_resource type="ArrayMesh" uid="uid://bfne435qxfge7" path="res://hoopy.fbx" id="22_ee4r6"]
+[ext_resource type="Material" uid="uid://t3hr1q8fdms" path="res://hulahoop.tres" id="22_gt3je"]
+[ext_resource type="Texture2D" uid="uid://ctt65wbqn3mgj" path="res://exascript.jpeg" id="24_3pmx8"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
@@ -29,6 +32,11 @@ size = Vector3(0.16003418, 9.839142, 16.13086)
 
 [sub_resource type="BoxMesh" id="BoxMesh_r6c0r"]
 size = Vector3(8.749756, 0.30773926, 17.376709)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u50mg"]
+albedo_texture = ExtResource("24_3pmx8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lfxu0"]
 
 [node name="Node3D" type="Node3D" unique_id=1869916815]
 script = ExtResource("1_6bp64")
@@ -44,11 +52,11 @@ material_override = ExtResource("2_jjvhh")
 mesh = ExtResource("3_kry3j")
 
 [node name="InsiderTradingGameMonitor2" type="MeshInstance3D" parent="." unique_id=1460953498]
-transform = Transform3D(1.2029198, 0.75209045, -0.045775834, 0.02634782, 0.044194266, 1.418487, 0.7530218, -1.2029784, 0.023492843, -1.3174031, 2.6241982, -1.7412808)
+transform = Transform3D(1.2029198, 0.75209045, -0.045775834, 0.02634782, 0.044194266, 1.418487, 0.7530218, -1.2029784, 0.023492843, -1.3300515, 3.0161443, -1.7347894)
 mesh = ExtResource("4_jjvhh")
 
 [node name="InsiderTradingGameMonitorLarge" type="MeshInstance3D" parent="." unique_id=956288831]
-transform = Transform3D(0.17281933, 2.8087719e-08, -0.64257205, 0.64257205, -7.554172e-09, 0.17281933, -1.0376178e-15, -0.6654062, -2.9085829e-08, 0.1092605, 1.654882, -0.015014768)
+transform = Transform3D(0.3984205, 2.808772e-08, -0.53294134, 0.53294134, -7.554172e-09, 0.3984205, 1.0767546e-08, -0.6654062, -2.7019352e-08, -0.478275, 1.7580156, -0.015014768)
 mesh = ExtResource("5_kry3j")
 
 [node name="Player" type="MeshInstance3D" parent="." unique_id=2034706867]
@@ -120,6 +128,11 @@ transform = Transform3D(0.84470934, 0.17717375, 0.5050502, -0.15206605, 0.984179
 light_color = Color(0.5273721, 0.45509428, 0.15774655, 1)
 light_energy = 12.113
 
+[node name="SpotLight3D4" type="SpotLight3D" parent="InsiderTradingGameMouse" unique_id=74343690]
+transform = Transform3D(0.47593904, 0.09018642, 0.87484205, -0.08567938, 0.99475133, -0.055935707, -0.8752949, -0.048333935, 0.48116812, 3.0239184, -2.0139163, 2.134646)
+light_color = Color(0.5273721, 0.45509428, 0.15774655, 1)
+light_energy = 12.113
+
 [node name="SpotLight3D2" type="SpotLight3D" parent="InsiderTradingGameMouse" unique_id=37708301]
 transform = Transform3D(0.76805115, -0.37218633, 0.52112854, 0.40880433, 0.91133946, 0.048367113, -0.49292657, 0.17589119, 0.85210675, 1.3932612, 0.27224827, 3.243872)
 light_color = Color(0.5273721, 0.45509428, 0.15774655, 1)
@@ -131,19 +144,19 @@ light_color = Color(0.5273721, 0.45509428, 0.15774655, 1)
 light_energy = 30.0
 
 [node name="MonitorTemplate" parent="." unique_id=1320213197 instance=ExtResource("10_hptm8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.7068574, 3.2002935, -0.27271783)
+transform = Transform3D(-4.371139e-08, 0.034333088, 0.99941045, 0, 0.99941045, -0.034333088, -1, -1.5007475e-09, -4.3685617e-08, -1.5289158, 3.5909796, -0.27271783)
 script = ExtResource("11_d1ilt")
 
 [node name="MonitorTemplate2" parent="." unique_id=163909348 instance=ExtResource("10_hptm8")]
-transform = Transform3D(-0.26115605, 0, 0.9652966, 0, 1, 0, -0.9652966, 0, -0.26115605, -1.4308525, 3.322222, 1.1815956)
+transform = Transform3D(-0.3081619, 0.11406969, 0.94447035, 0.0058342777, 0.99299324, -0.11802651, -0.951316, -0.030860968, -0.30666822, -1.4308525, 3.654914, 1.1815956)
 script = ExtResource("12_6iyac")
 
 [node name="MonitorTemplate3" parent="." unique_id=680070277 instance=ExtResource("10_hptm8")]
-transform = Transform3D(-0.26115605, 0, 0.9652966, 0, 1, 0, -0.9652966, 0, -0.26115605, -1.2855372, 2.2258198, 1.3844674)
+transform = Transform3D(-0.381093, 0, 0.9245367, 0, 1, 0, -0.9245367, 0, -0.381093, -1.2855372, 2.5585117, 1.3844674)
 script = ExtResource("13_fdnlq")
 
 [node name="MonitorTemplate4" parent="." unique_id=548838214 instance=ExtResource("10_hptm8")]
-transform = Transform3D(0.020705432, 0, 0.9997856, 0, 1, 0, -0.9997856, 0, 0.020705432, -1.5126243, 2.2258198, -0.070457816)
+transform = Transform3D(0.020705432, 0, 0.9997856, 0, 1, 0, -0.9997856, 0, 0.020705432, -1.5126243, 2.5585117, -0.070457816)
 script = ExtResource("14_jkdf5")
 
 [node name="InsiderTradingGameCable2" type="MeshInstance3D" parent="." unique_id=183404477]
@@ -170,5 +183,16 @@ surface_material_override/0 = ExtResource("6_6iyac")
 transform = Transform3D(-0.00946563, -0.22275761, -0.20448379, 0.008472212, -0.20469907, 0.22259986, -0.3022628, 0.0012382546, 0.012642918, -1.6953138, 3.1209984, 0.28709924)
 mesh = ExtResource("16_fevyy")
 surface_material_override/0 = ExtResource("6_6iyac")
+
+[node name="Hoopy" type="MeshInstance3D" parent="." unique_id=551238042]
+transform = Transform3D(0.008596389, -0.10140124, -0.036727116, -0.09476307, 0.010487854, -0.051136643, 0.051488385, 0.036232345, -0.087983824, -0.9380486, 0.8750962, 3.1489105)
+material_override = ExtResource("22_gt3je")
+mesh = ExtResource("22_ee4r6")
+surface_material_override/0 = ExtResource("22_gt3je")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2050350091]
+transform = Transform3D(-0.10806449, 0.24128677, 0.17621835, 1.1312533e-08, 0.14941858, -0.32737356, -0.27861395, -0.09358659, -0.06834887, -1.9783243, 1.641745, 1.3885418)
+material_override = SubResource("StandardMaterial3D_u50mg")
+mesh = SubResource("PlaneMesh_lfxu0")
 
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]

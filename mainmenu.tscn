@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dq2sg2cwvi5qt"]
+
+[ext_resource type="Texture2D" uid="uid://bxura3c8l1lvq" path="res://Scenes/stonksbutchill.png" id="1_d2nv2"]
+[ext_resource type="Script" uid="uid://dxyrw87fmgu8g" path="res://mainmenu.gd" id="1_wgsso"]
+[ext_resource type="FontFile" uid="uid://paqvblxxkxp" path="res://Scenes/Panic.ttf" id="2_wgsso"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hjb8m"]
+font = ExtResource("2_wgsso")
+font_size = 93
+outline_size = 24
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Control" unique_id=857749491]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wgsso")
+
+[node name="Stonksbutchill" type="Sprite2D" parent="." unique_id=1334270893]
+position = Vector2(577, 324.75)
+scale = Vector2(1.7, 1.4227374)
+texture = ExtResource("1_d2nv2")
+
+[node name="Label" type="Label" parent="." unique_id=1327444199]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 47.0
+offset_right = 999.0
+offset_bottom = 175.0
+text = "Stock Bouncer"
+label_settings = SubResource("LabelSettings_hjb8m")
+uppercase = true
+
+[node name="Start Button" type="Button" parent="." unique_id=30630639]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 370.0
+offset_right = 471.0
+offset_bottom = 497.0
+theme_override_fonts/font = ExtResource("2_wgsso")
+theme_override_font_sizes/font_size = 87
+text = "START"
+
+[node name="Quit Button" type="Button" parent="." unique_id=75213145]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 531.0
+offset_right = 265.0
+offset_bottom = 601.0
+theme_override_fonts/font = ExtResource("2_wgsso")
+theme_override_font_sizes/font_size = 46
+text = "QUIT"
+
+[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]

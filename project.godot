@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Insider training"
-run/main_scene="uid://cc108yh6s05ht"
+run/main_scene="uid://dq2sg2cwvi5qt"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [display]
