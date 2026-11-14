@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://by6y7wxnwybch" path="res://Scenes/monitor_template.gd" id="1_7ri03"]
 [ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="1_ld40p"]
+[ext_resource type="Material" uid="uid://cdig1ufl2a68q" path="res://invisiblematerial.tres" id="3_0j5qj"]
 [ext_resource type="Material" uid="uid://bnieva1vfiwvm" path="res://new_standard_material_3d.tres" id="3_63ioy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_odlsx"]
@@ -47,6 +48,7 @@ mesh = ExtResource("1_ld40p")
 
 [node name="Screen" type="MeshInstance3D" parent="." unique_id=1281633472]
 transform = Transform3D(1.9106857e-15, -4.3711392e-08, -1.0000001, -1, -4.371139e-08, 0, -4.3711392e-08, 1.0000001, -4.3711392e-08, 0.00015544744, 0.0009454474, 0.032969892)
+material_override = ExtResource("3_0j5qj")
 mesh = SubResource("PlaneMesh_hjb8m")
 
 [node name="Dot" type="MeshInstance3D" parent="Screen" unique_id=784752588]
