@@ -224,3 +224,12 @@ func _on_story_timer_timeout() -> void:
 	var story = [stories[sngle][cat][story_type][rng.randi_range(0, len(stories[sngle][cat][story_type])-1)].replace("%c", company).replace("%s", companies[cat][company]).replace("%p", str(percentage)+"%"), sngle, cat, company, percentage]
 	print(story)
 	stories_shown["saveable"].append(story)
+	if sngle == "single":
+		print(stocks[companies[cat][company]])
+		stocks[companies[cat][company]] += stocks[companies[cat][company]] * (float(percentage) / 100)
+		print(stocks[companies[cat][company]])
+	else:
+		for stock in companies[cat].values():
+			print(stock + ": " + str(stocks[stock]))
+			stocks[stock] += stocks[stock] * (float(percentage) / 100)
+			print(stock + ": " + str(stocks[stock]))
