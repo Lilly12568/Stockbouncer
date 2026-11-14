@@ -202,18 +202,25 @@ func _on_timer_timeout() -> void:
 		history[stock].append([stocks[stock], mvmt])
 		if len(history[stock]) > 15:
 			history[stock].pop_front()
-	print(stocks)
-	print(history)
+	#print(stocks)
+	#print(history)
 	var prnt = """"""
 	for stock in stocks:
 		prnt += stock + ": " + str(stocks[stock]) + "\n"
-	print(prnt)
+	#print(prnt)
 
 func _on_story_timer_timeout() -> void:
-	var sngle = stories[rng.randi_range(0, len(stories)-1)]
-	var cat = stories[sngle][rng.randi_range(0, len(stories[sngle])-1)]
-	var company = companies[cat][rng.randi_range(0, len(companies[cat])-1)]
-	var story_type = stories[sngle][cat][rng.randi_range(0, len(stories[sngle][cat])-1)]
-	var story = [stories[sngle][cat][story_type][rng.randi_range(0, len(stories[sngle][cat][story_type])-1)]]
+	var sngle = stories.keys()[rng.randi_range(0, len(stories)-1)]
+	var cat = stories[sngle].keys()[rng.randi_range(0, len(stories[sngle])-1)]
+	var company = companies[cat].keys()[rng.randi_range(0, len(companies[cat])-1)]
+	var story_type = stories[sngle][cat].keys()[rng.randi_range(0, len(stories[sngle][cat])-1)]
+	var percentage = 0
+	if story_type == "good":
+		percentage = rng.randi_range(0,15)
+	elif story_type == "bad":
+		percentage = rng.randi_range(-15,0)
+	else:
+		percentage = rng.randi_range(-15, 15)
+	var story = [stories[sngle][cat][story_type][rng.randi_range(0, len(stories[sngle][cat][story_type])-1)].replace("%c", company).replace("%s", companies[cat][company]).replace("%p", str(percentage)+"%"), sngle, cat, company, percentage]
 	print(story)
-	stories_shown["saveable"].append([cat,company,story_type])
+	stories_shown["saveable"].append(story)

@@ -146,6 +146,7 @@ transform = Transform3D(1, 2.7753413e-07, -6.938353e-08, 1.9185245e-07, 1, -8.00
 shape = SubResource("BoxShape3D_r6c0r")
 
 [node name="refresh_stocks" type="Timer" parent="." unique_id=316505965]
+autostart = true
 
 [node name="Control" type="Control" parent="." unique_id=1111080794 node_paths=PackedStringArray("camera")]
 layout_mode = 3
@@ -165,7 +166,6 @@ offset_right = 641.0
 offset_bottom = 66.0
 
 [node name="story_timer" type="Timer" parent="." unique_id=1459921805]
-wait_time = 7.5
 autostart = true
 
 [connection signal="input_event" from="CameraPositions/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
