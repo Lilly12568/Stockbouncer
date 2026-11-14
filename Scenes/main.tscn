@@ -104,4 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06496742, 0.0028762817, -0.
 [node name="NewsFeed" type="Node3D" parent="CameraPositions" unique_id=1996553602]
 transform = Transform3D(0.008198082, 0, 0.99996626, 0, 1, 0, -0.99996626, 0, 0.008198082, -0.62940836, 3.1703982, -0.20554948)
 
+[node name="refresh_stocks" type="Timer" parent="." unique_id=316505965]
+
 [connection signal="input_event" from="InsiderTradingGameMonitor5/Area3D" to="Player2/Camera3D" method="_on_area_3d_input_event"]
+[connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
