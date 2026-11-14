@@ -4,3 +4,13 @@
 
 [node name="Node3D" type="Node3D" unique_id=1869916815]
 script = ExtResource("1_ig7tw")
+
+[node name="Timer" type="Timer" parent="." unique_id=265124294]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1666685224]
+
+[node name="Label" type="Label3D" parent="CanvasLayer" unique_id=163317082]
+text = "aaaaaaaa"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
