@@ -248,12 +248,12 @@ func tick_stories() -> Array:
 		var story_type = stories[sngle][cat].keys().pick_random()
 		var percentage = 0
 		if story_type == "good":
-			percentage = rng.randi_range(5,15)
+			percentage = rng.randi_range(30,75)
 		elif story_type == "bad":
-			percentage = rng.randi_range(-15,-5)
+			percentage = rng.randi_range(-75,-30)
 		else:
-			percentage = [rng.randi_range(-15, 15), rng.randi_range(-15, 15)].pick_random()
-		var story = [stories[sngle][cat][story_type].pick_random(), sngle, cat, company, percentage, 15]
+			percentage = [rng.randi_range(-50, 50), rng.randi_range(-50, 50)].pick_random()
+		var story = [stories[sngle][cat][story_type].pick_random(), sngle, cat, company, percentage, 10]
 		stories_shown["6"] = stories_shown["5"]
 		stories_shown["5"] = stories_shown["4"]
 		stories_shown["4"] = stories_shown["3"]

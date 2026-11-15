@@ -1,9 +1,6 @@
 
 extends Control
 
-@onready var menu_container = $MenuContainer
-@onready var options_panel = $OptionsPanel
-
 
 func _on_start_button_pressed():
 	get_tree().change_scene_to_file("res://introsequence.tscn")
