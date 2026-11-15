@@ -18,6 +18,12 @@ height = 0.03
 [sub_resource type="PlaneMesh" id="PlaneMesh_r6c0r"]
 size = Vector2(0.005, 0.08)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_0j5qj"]
+size = Vector2(1.4, 0.002)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_odlsx"]
+size = Vector2(1.4, 0.002)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_hjb8m"]
 size = Vector3(0.20605469, 0.115234375, 0.21289063)
 
@@ -29,12 +35,6 @@ size = Vector3(0.117263794, 0.08984375, 0.119506836)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucim2"]
 size = Vector3(0.08955383, 0.08306885, 0.115234375)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_0j5qj"]
-size = Vector2(1.4, 0.002)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_odlsx"]
-size = Vector2(1.4, 0.002)
 
 [node name="MonitorTemplate" type="Node3D" unique_id=1320213197]
 script = ExtResource("1_7ri03")
@@ -195,6 +195,34 @@ transform = Transform3D(-4.3711385e-08, -0.9999999, -2.1316282e-14, 4.3711367e-0
 text = "<         >"
 font_size = 21
 
+[node name="Label3D3" type="Label3D" parent="Screen" unique_id=1290147401]
+transform = Transform3D(8.179732e-16, -0.42810464, -1.8713045e-08, -1.8713045e-08, -1.8713047e-08, 0.42810458, -0.42810458, -9.0654665e-23, -1.8713045e-08, 0.37574607, 0.0083590895, 0.00015544707)
+text = "[PRICE]"
+
+[node name="Label3D4" type="Label3D" parent="Screen" unique_id=697464217]
+transform = Transform3D(4.8188737e-16, -0.25220656, -1.1024297e-08, -1.1024297e-08, -1.1024298e-08, 0.25220653, -0.25220653, -5.3406805e-23, -1.1024297e-08, -0.3606432, 0.008359082, 0.53777623)
+text = "[MIN PRICE]"
+
+[node name="Label3D5" type="Label3D" parent="Screen" unique_id=1276453753]
+transform = Transform3D(4.8188737e-16, -0.25220656, -1.1024297e-08, -1.1024297e-08, -1.1024298e-08, 0.25220653, -0.25220653, -5.3406805e-23, -1.1024297e-08, -0.3606432, 0.008359067, 0.18945852)
+text = "[MAX PRICE]"
+
+[node name="Label3D6" type="Label3D" parent="Screen" unique_id=1557594148]
+transform = Transform3D(4.8188737e-16, -0.25220656, -1.1024297e-08, -1.1024297e-08, -1.1024298e-08, 0.25220653, -0.25220653, -5.3406805e-23, -1.1024297e-08, -0.3606432, 0.008359052, -0.14182205)
+text = "[UP/DOWN]"
+
+[node name="MaxValueLine" type="MeshInstance3D" parent="Screen" unique_id=2023181558]
+transform = Transform3D(1.9106853e-15, 7.1054274e-15, 1, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 1.9106855e-15, -0.29905456, 0.0030300915, 0.0001554473)
+mesh = SubResource("PlaneMesh_0j5qj")
+
+[node name="MinValueLine" type="MeshInstance3D" parent="Screen" unique_id=163113201]
+transform = Transform3D(1.9106853e-15, 7.1054274e-15, 1, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 1.9106855e-15, 0.30094546, 0.0030301213, 0.0001554473)
+mesh = SubResource("PlaneMesh_odlsx")
+
+[node name="MidValueLine" type="MeshInstance3D" parent="Screen" unique_id=1738792860]
+transform = Transform3D(1.9106853e-15, 7.1054274e-15, 0.26030982, -4.371138e-08, 0.9999999, 8.881784e-16, -0.9999999, -4.371138e-08, 4.973702e-16, 0.0009454473, 0.0030301064, 0.0001554473)
+mesh = SubResource("PlaneMesh_odlsx")
+
 [node name="BuyArea" type="Area3D" parent="." unique_id=1550920083]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.051578283, 0)
 
@@ -220,34 +248,6 @@ shape = SubResource("BoxShape3D_g2mn5")
 [node name="RightStockButton" type="CollisionShape3D" parent="RightStockArea" unique_id=938962659]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6200744, 0.39804077, 0.027433917)
 shape = SubResource("BoxShape3D_ucim2")
-
-[node name="Label3D" type="Label3D" parent="." unique_id=1290147401]
-transform = Transform3D(0.42810464, 0, 0, 0, 0.42810464, 0, 0, 0, 0.42810464, 0, -0.37480062, 0.041328967)
-text = "[PRICE]"
-
-[node name="Label3D2" type="Label3D" parent="." unique_id=697464217]
-transform = Transform3D(0.25220656, 0, 0, 0, 0.25220656, 0, 0, 0, 0.25220656, -0.53762084, 0.36158866, 0.041328967)
-text = "[MIN PRICE]"
-
-[node name="Label3D3" type="Label3D" parent="." unique_id=1276453753]
-transform = Transform3D(0.25220656, 0, 0, 0, 0.25220656, 0, 0, 0, 0.25220656, -0.1893031, 0.36158866, 0.041328967)
-text = "[MAX PRICE]"
-
-[node name="Label3D4" type="Label3D" parent="." unique_id=1557594148]
-transform = Transform3D(0.25220656, 0, 0, 0, 0.25220656, 0, 0, 0, 0.25220656, 0.14197752, 0.36158866, 0.041328967)
-text = "[UP/DOWN]"
-
-[node name="MaxValueLine" type="MeshInstance3D" parent="." unique_id=2023181558]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.3, 0.036)
-mesh = SubResource("PlaneMesh_0j5qj")
-
-[node name="MinValueLine" type="MeshInstance3D" parent="." unique_id=163113201]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.3, 0.036)
-mesh = SubResource("PlaneMesh_odlsx")
-
-[node name="MidValueLine" type="MeshInstance3D" parent="." unique_id=1738792860]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -0.26030982, 0, 1, -1.13785035e-08, 0, 0, 0.036)
-mesh = SubResource("PlaneMesh_odlsx")
 
 [connection signal="input_event" from="LeftStockArea" to="." method="_on_left_input_button_event"]
 [connection signal="input_event" from="RightStockArea" to="." method="_on_right_stock_area_input_event"]

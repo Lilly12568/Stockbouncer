@@ -21,3 +21,17 @@ func _on_input_event(
 
 			if player_camera:
 				player_camera.LerpCamToPos(self)
+
+func _process(delta: float) -> void:
+	$"Quota days".text = "IN " + str(Variables.days) + " DAYS"
+	$"Price".text = str(Variables.price)
+	$"Quota".text = str(Variables.quota)
+	$"Balance".text = str(Variables.money)
+
+func _on_buy_push(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			$"?".visible = false
+			$Code.visible = true
+			$Company.visible = true
+			$Icon.visible = true

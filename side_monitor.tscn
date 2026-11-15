@@ -32,7 +32,7 @@ text = "NEXT PAYMENT:
 "
 font_size = 35
 
-[node name="Label3D4" type="Label3D" parent="." unique_id=908913002]
+[node name="Quota" type="Label3D" parent="." unique_id=908913002]
 transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.32481062, 0.25647083, 0.03441843)
 text = "[AMOUNT]"
 font_size = 65
@@ -45,7 +45,7 @@ text = "UNLOCK NEW STOCK:"
 transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.36339933, -0.070890784, 0.03441843)
 text = "PRICE:"
 
-[node name="Label3D11" type="Label3D" parent="." unique_id=1502770171]
+[node name="Price" type="Label3D" parent="." unique_id=1502770171]
 transform = Transform3D(0.49665377, 0, 0, 0, 0.49665377, 0, 0, 0, 0.49665377, -0.36339933, -0.17932308, 0.03441843)
 text = "[AMOUNT]"
 
@@ -53,19 +53,22 @@ text = "[AMOUNT]"
 transform = Transform3D(0.49665377, 0, 0, 0, 0.49665377, 0, 0, 0, 0.49665377, -0.36339933, -0.31673768, 0.03441843)
 text = "BUY"
 
-[node name="Label3D7" type="Label3D" parent="." unique_id=96368238]
+[node name="Company" type="Label3D" parent="." unique_id=96368238]
 transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.36339933, 0.0909884, 0.03441843)
+visible = false
 text = "[COMPANY NAME]"
 
-[node name="Label3D8" type="Label3D" parent="." unique_id=2125450149]
+[node name="Code" type="Label3D" parent="." unique_id=2125450149]
 transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.2709049, 0.19020718, 0.03441843)
+visible = false
 text = "[CODE]"
 
-[node name="Label3D9" type="Label3D" parent="." unique_id=1416241583]
+[node name="Icon" type="Label3D" parent="." unique_id=1416241583]
 transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.483831, 0.19020718, 0.03441843)
+visible = false
 text = "[ICON]"
 
-[node name="Label3D3" type="Label3D" parent="." unique_id=215576475]
+[node name="Quota days" type="Label3D" parent="." unique_id=215576475]
 transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.3314023, 0.13253333, 0.03441843)
 text = "IN [X] DAYS"
 font_size = 35
@@ -75,7 +78,7 @@ transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.324
 text = "BALANCE:"
 font_size = 35
 
-[node name="Label3D6" type="Label3D" parent="." unique_id=1638477759]
+[node name="Balance" type="Label3D" parent="." unique_id=1638477759]
 transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.32481062, -0.29764524, 0.03441843)
 text = "[AMOUNT]"
 font_size = 65
@@ -87,5 +90,11 @@ mesh = SubResource("PlaneMesh_lfxu0")
 [node name="Area3D" type="Area3D" parent="." unique_id=257701280]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1636103950]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3544889, -0.3209684, 0.034698486)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.9225651, -0.3544889, -0.3209684, 0.034698486)
 shape = SubResource("BoxShape3D_hjb8m")
+
+[node name="?" type="Label3D" parent="." unique_id=1908405042]
+transform = Transform3D(1.44, 0, 0, 0, 1.44, 0, 0, 0, 1, -0.3755224, 0.14696176, 0.034)
+text = "?"
+
+[connection signal="input_event" from="Area3D" to="." method="_on_buy_push"]

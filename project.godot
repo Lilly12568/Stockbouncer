@@ -14,6 +14,10 @@ config/name="Insider training"
 run/main_scene="uid://dq2sg2cwvi5qt"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+Variables="*uid://dwitc2yk32ddn"
+
 [display]
 
 window/stretch/mode="canvas_items"
