@@ -22,7 +22,8 @@ var dialogue = [
 
 
 func _ready():
-	play_sequence()
+	if not Variables.playing:
+		play_sequence()
 
 
 func play_sequence():

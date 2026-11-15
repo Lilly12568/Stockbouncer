@@ -198,6 +198,7 @@ var bought_in = {}
 
 func start(force: bool= false) -> void:
 	if not playing or force:
+		playing = true
 		rng = RandomNumberGenerator.new()
 		counter = 0
 		stocks = {}
@@ -287,7 +288,11 @@ func tick_stories() -> Array:
 func tick_days() -> void:
 	days -= 1
 	if days <= 0:
-		get_tree().change_scene_to_file("res://quota_scene.tscn")
+		if money >= quota:
+			get_tree().change_scene_to_file("res://quota_scene.tscn")
+		else:
+			get_tree().change_scene_to_file("res://fail.tscn")
+		
 
 func rotate_left(event: InputEvent, monitor: String) -> void:
 	if event is InputEventMouseButton and monitors[monitor] != null:

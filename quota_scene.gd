@@ -15,7 +15,7 @@ var isLooping = false
 var dialogue = [
 	"GUESS WHO'S BACK, KID.",
 	"I HOPE YOU SCROUNGED UP\nENOUGH TO PAY ME.",
-	"IT'S %a TODAY, KID. COUGH IT UP.",
+	"IT'S %a TODAY, KID. COUGH IT UP.".replace("%a", str(Variables.quota)),
 	"SMART KID.\nDON'T GET LAZY, THOUGH.",
 	"I'LL BE BACK AGAIN SOON."
 ]
@@ -61,4 +61,5 @@ func play_sequence():
 
 	# Switch scene once all passages are finished
 	Variables.days = 7
+	Variables.money -= Variables.quota
 	get_tree().change_scene_to_file(next_scene)

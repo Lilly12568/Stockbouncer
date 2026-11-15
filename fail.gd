@@ -31,6 +31,7 @@ func _on_quit_button_pressed():
 
 
 func _ready():
+	Variables.playing = false
 	dialogue_sound.finished.connect(_on_sound_finished)
 	play_sequence()
 
