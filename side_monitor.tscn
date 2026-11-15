@@ -61,22 +61,25 @@ text = "BUY"
 font = ExtResource("3_172jn")
 
 [node name="Company" type="Label3D" parent="." unique_id=96368238]
-transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.36339933, 0.0909884, 0.03441843)
+transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.36808962, 0.0909884, 0.03441843)
 visible = false
 text = "[COMPANY NAME]"
 font = ExtResource("3_172jn")
+font_size = 35
 
 [node name="Code" type="Label3D" parent="." unique_id=2125450149]
 transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.2709049, 0.19020718, 0.03441843)
 visible = false
-text = "[CODE]"
+text = "XXXX"
 font = ExtResource("3_172jn")
+font_size = 65
 
 [node name="Icon" type="Label3D" parent="." unique_id=1416241583]
-transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.483831, 0.19020718, 0.03441843)
+transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.5222572, 0.19020718, 0.03441843)
 visible = false
-text = "[ICON]"
+text = "A"
 font = ExtResource("3_172jn")
+font_size = 65
 
 [node name="Quota days" type="Label3D" parent="." unique_id=215576475]
 transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.3314023, 0.13253333, 0.03441843)

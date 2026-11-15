@@ -4,6 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="1_ld40p"]
 [ext_resource type="Material" uid="uid://cdig1ufl2a68q" path="res://invisiblematerial.tres" id="3_0j5qj"]
 [ext_resource type="Material" uid="uid://bnieva1vfiwvm" path="res://new_standard_material_3d.tres" id="3_63ioy"]
+[ext_resource type="FontFile" uid="uid://kh5fu8jkvwcr" path="res://Scripts/OpenSans-SemiBold.ttf" id="5_673np"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lfxu0"]
 size = Vector3(0.04045105, 0.939209, 1.5087891)
@@ -185,9 +186,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3877877e-17, 0.004854433, -
 mesh = SubResource("PlaneMesh_r6c0r")
 surface_material_override/0 = ExtResource("3_63ioy")
 
-[node name="Label3D" type="Label3D" parent="Screen" unique_id=897470889]
+[node name="Code" type="Label3D" parent="Screen" unique_id=897470889]
 transform = Transform3D(1.9106848e-15, -1, -4.371136e-08, -4.371136e-08, -4.3711363e-08, 0.9999999, -0.9999999, -1.1435921e-21, -4.371136e-08, -0.39664108, 0.019747984, -0.48720717)
 text = "XXXX"
+font = ExtResource("5_673np")
 font_size = 10
 
 [node name="Label3D2" type="Label3D" parent="Screen" unique_id=224152107]
@@ -195,7 +197,7 @@ transform = Transform3D(-4.3711385e-08, -0.9999999, -2.1316282e-14, 4.3711367e-0
 text = "<         >"
 font_size = 21
 
-[node name="Label3D3" type="Label3D" parent="Screen" unique_id=1290147401]
+[node name="CurrentPrice" type="Label3D" parent="Screen" unique_id=1290147401]
 transform = Transform3D(8.179732e-16, -0.42810464, -1.8713045e-08, -1.8713045e-08, -1.8713047e-08, 0.42810458, -0.42810458, -9.0654665e-23, -1.8713045e-08, 0.37574607, 0.0083590895, 0.00015544707)
 text = "[PRICE]"
 
