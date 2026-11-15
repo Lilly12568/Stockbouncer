@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cxgt7y3u0517h" path="res://side_monitor.gd" id="1_vrefm"]
 [ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="2_172jn"]
 [ext_resource type="FontFile" uid="uid://kh5fu8jkvwcr" path="res://Scripts/OpenSans-SemiBold.ttf" id="3_172jn"]
+[ext_resource type="AudioStream" uid="uid://bwq1u8rq3xeb0" path="res://Scripts/purchasesuccess.mp3" id="4_ap1h8"]
+[ext_resource type="AudioStream" uid="uid://q5jx8o5f0o01" path="res://Scripts/purchasefail.mp3" id="5_gj5ad"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lfxu0"]
 size = Vector3(0.04045105, 0.939209, 1.5087891)
@@ -113,5 +115,11 @@ shape = SubResource("BoxShape3D_hjb8m")
 transform = Transform3D(1.44, 0, 0, 0, 1.44, 0, 0, 0, 1, -0.3755224, 0.14696176, 0.034)
 text = "?"
 font = ExtResource("3_172jn")
+
+[node name="PurchaseSuccess" type="AudioStreamPlayer3D" parent="." unique_id=1338641510]
+stream = ExtResource("4_ap1h8")
+
+[node name="PurchaseFail" type="AudioStreamPlayer3D" parent="." unique_id=331341190]
+stream = ExtResource("5_gj5ad")
 
 [connection signal="input_event" from="Area3D" to="." method="_on_buy_push"]

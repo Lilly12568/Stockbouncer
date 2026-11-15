@@ -1,7 +1,8 @@
 extends Node3D
 
 @onready var interaction_area: Area3D = $MonitorCollider
-
+@onready var purchase_success: AudioStreamPlayer3D = $PurchaseSuccess
+@onready var purchase_fail: AudioStreamPlayer3D = $PurchaseFail
 
 func _ready():
 	interaction_area.input_event.connect(_on_input_event)
@@ -32,12 +33,13 @@ func _on_buy_push(camera: Node, event: InputEvent, event_position: Vector3, norm
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if Variables.money < Variables.price:
-				print("bleh") # sound effect here
+				purchase_success.play()
 				$Price.set("modulate",Color(1,0,0,1))
 				while $Price.get("modulate").g < 1:
 					$Price.set("modulate",Color(1,$Price.get("modulate").g + 0.01, $Price.get("modulate").b + 0.01,1))
 					await get_tree().create_timer(0.01).timeout
 			else:
+				purchase_fail.play()
 				Variables.money -= Variables.price
 				$"?".visible = false
 				$Code.visible = true
