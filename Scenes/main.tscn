@@ -31,10 +31,10 @@
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hjb8m"]
-size = Vector3(0.16003418, 9.839142, 16.13086)
+size = Vector3(0.16003418, 9.839142, 32.35376)
 
 [sub_resource type="BoxMesh" id="BoxMesh_r6c0r"]
-size = Vector3(8.749756, 0.30773926, 17.376709)
+size = Vector3(8.749756, 0.30773926, 33.04126)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u50mg"]
 albedo_texture = ExtResource("24_3pmx8")
@@ -45,6 +45,9 @@ albedo_texture = ExtResource("24_3pmx8")
 font_size = 31
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lfxu0"]
+size = Vector3(10.116211, 9.6328125, 1)
 
 [node name="Node3D" type="Node3D" unique_id=1869916815]
 script = ExtResource("1_6bp64")
@@ -234,6 +237,16 @@ offset_bottom = 327.3
 text = "TUTORIAL TEXT"
 label_settings = SubResource("LabelSettings_1w6v2")
 autowrap_mode = 3
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=2108517283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0070553, 4.3164063, 11.205603)
+mesh = SubResource("BoxMesh_lfxu0")
+surface_material_override/0 = ExtResource("6_6iyac")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1287563759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0070553, 4.3164063, -11.176811)
+mesh = SubResource("BoxMesh_lfxu0")
+surface_material_override/0 = ExtResource("6_6iyac")
 
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="days_timer" to="." method="_on_days_timer"]
