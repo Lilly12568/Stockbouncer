@@ -62,7 +62,7 @@ func _process(delta):
 		base_position = base_position.lerp(destination_pos, weight)
 		base_rotation = base_rotation.slerp(destination_rot, weight)
 
-		if base_position.distance_to(destination_pos) < 0.01:
+		if base_position.distance_to(destination_pos) < 0.001:
 			base_position = destination_pos
 			base_rotation = destination_rot
 			moving = false

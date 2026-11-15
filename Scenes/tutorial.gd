@@ -5,6 +5,7 @@ extends Control
 @export var text_wait_time: float = 7
 
 @onready var text_label: Label = $Label
+@onready var ding_sound: AudioStreamPlayer3D = $TutorialDings
 
 
 var dialogue = [
@@ -36,6 +37,7 @@ func play_sequence():
 		for i in range(line.length()):
 			text_label.visible_characters = i + 1
 			await get_tree().create_timer(character_delay).timeout
+			ding_sound.play()
 
 		# Wait before displaying the next passage
 		await get_tree().create_timer(text_wait_time).timeout

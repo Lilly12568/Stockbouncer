@@ -21,13 +21,15 @@ position = Vector2(577, 324.75)
 scale = Vector2(1.7, 1.4227374)
 texture = ExtResource("1_d2nv2")
 
-[node name="Label" type="Label" parent="." unique_id=1327444199]
+[node name="Title" type="Label" parent="." unique_id=1327444199]
 layout_mode = 0
-offset_left = 134.0
-offset_top = 47.0
-offset_right = 999.0
-offset_bottom = 175.0
-text = "Stock Bouncer"
+offset_left = 48.999996
+offset_top = 56.000004
+offset_right = 914.0
+offset_bottom = 184.0
+rotation = 0.2884393
+scale = Vector2(1.3290814, 1.3290814)
+text = "Stockbouncer"
 label_settings = SubResource("LabelSettings_hjb8m")
 uppercase = true
 

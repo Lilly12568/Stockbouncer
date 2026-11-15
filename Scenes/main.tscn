@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://ctt65wbqn3mgj" path="res://exascript.jpeg" id="24_3pmx8"]
 [ext_resource type="PackedScene" uid="uid://co2un41yeib3k" path="res://side_monitor.tscn" id="26_cbgmd"]
 [ext_resource type="Script" uid="uid://dq0pxjmut0dg3" path="res://Scenes/tutorial.gd" id="27_1w6v2"]
+[ext_resource type="AudioStream" uid="uid://cmx65xwqopc3m" path="res://ding.mp3" id="28_ueoa1"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
@@ -53,7 +54,7 @@ size = Vector3(10.116211, 9.6328125, 1)
 script = ExtResource("1_6bp64")
 
 [node name="InsiderTradingGameSpeaker" type="MeshInstance3D" parent="." unique_id=1667637689]
-transform = Transform3D(0.34881833, -0.19844814, -8.674443e-09, 0, -1.7542154e-08, 0.40131772, -0.19844814, -0.34881833, -1.5247334e-08, -0.82709944, 1.6788137, 2.194303)
+transform = Transform3D(0.34881833, -0.19844814, -8.674443e-09, 0, -1.7542154e-08, 0.40131772, -0.19844814, -0.34881833, -1.5247334e-08, -0.8373039, 1.6788138, 1.5619973)
 material_override = ExtResource("2_jjvhh")
 mesh = ExtResource("3_kry3j")
 
@@ -95,7 +96,7 @@ mesh = ExtResource("6_21xkr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3917657, 1.6966377, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player2" unique_id=693597734]
-transform = Transform3D(-0.034899343, 0.17354241, 0.98420787, 0, 0.9848078, -0.1736482, -0.99939084, -0.0060602077, -0.034369145, 0.21514165, 0.5436722, 0)
+transform = Transform3D(-0.034899347, 0.09484476, 0.9948802, 0, 0.9954867, -0.09490256, -0.9993908, -0.003312037, -0.034741826, 0.21514165, 0.5436722, 0)
 current = true
 script = ExtResource("6_6bp64")
 z_offset = 1.0
@@ -242,6 +243,10 @@ offset_bottom = 327.3
 text = "TUTORIAL TEXT"
 label_settings = SubResource("LabelSettings_1w6v2")
 autowrap_mode = 3
+
+[node name="TutorialDings" type="AudioStreamPlayer3D" parent="Tutorial" unique_id=1647605060]
+stream = ExtResource("28_ueoa1")
+volume_db = -10.698
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=2108517283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0070553, 4.3164063, 11.205603)
