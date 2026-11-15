@@ -120,6 +120,15 @@ offset_top = 26.0
 offset_right = 641.0
 offset_bottom = 66.0
 
+[node name="Label" type="Label" parent="Control/Panel" unique_id=1319572698]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 8.0
+offset_right = 265.0
+offset_bottom = 31.0
+scale = Vector2(2.8853955, 1)
+text = "V V V V V V V"
+
 [node name="days_timer" type="Timer" parent="." unique_id=1459921805]
 wait_time = 90.0
 autostart = true
