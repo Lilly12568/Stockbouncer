@@ -1,16 +1,21 @@
 [gd_scene format=3 uid="uid://bi4d2rpedh71"]
 
 [ext_resource type="Script" uid="uid://dlfqau77rqtoy" path="res://pass.gd" id="1_bvjfu"]
+[ext_resource type="FontFile" uid="uid://cntmti3b44d07" path="res://Collegier.ttf" id="2_wdmn4"]
 [ext_resource type="AudioStream" uid="uid://bagqk1iukflj7" path="res://Our.mp3" id="2_wyqu5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wdmn4"]
+font = ExtResource("2_wdmn4")
 font_size = 47
 
-[node name="Pass" type="Node2D" unique_id=33202920]
+[node name="Pass" type="Control" unique_id=559412865]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_bvjfu")
 
 [node name="TextLabel" type="Label" parent="." unique_id=752912673]
 z_index = 1
+layout_mode = 0
 offset_left = 134.0
 offset_top = 69.0
 offset_right = 683.0
@@ -21,6 +26,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SkipPrompt" type="Label" parent="." unique_id=1773040871]
 z_index = 1
+layout_mode = 0
 offset_left = 57.0
 offset_top = 581.0
 offset_right = 606.0
@@ -31,6 +37,7 @@ label_settings = SubResource("LabelSettings_wdmn4")
 metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="ColorRect" parent="." unique_id=1763414600]
+layout_mode = 0
 offset_right = 1168.0
 offset_bottom = 659.0
 color = Color(3.6098065e-08, 0.069158524, 0.096017025, 1)
