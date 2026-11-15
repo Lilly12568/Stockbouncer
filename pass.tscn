@@ -3,10 +3,16 @@
 [ext_resource type="Script" uid="uid://dlfqau77rqtoy" path="res://pass.gd" id="1_bvjfu"]
 [ext_resource type="FontFile" uid="uid://6at3ks7im8dv" path="res://Scripts/ZeroCollege.ttf" id="2_wdmn4"]
 [ext_resource type="AudioStream" uid="uid://bagqk1iukflj7" path="res://Our.mp3" id="2_wyqu5"]
+[ext_resource type="FontFile" uid="uid://paqvblxxkxp" path="res://Scenes/Panic.ttf" id="3_wdmn4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wyqu5"]
+font = ExtResource("2_wdmn4")
+font_size = 80
+font_color = Color(0.4627451, 0.22745098, 0.24705882, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wdmn4"]
-font = ExtResource("2_wdmn4")
-font_size = 47
+font = ExtResource("3_wdmn4")
+font_size = 80
 
 [node name="Pass" type="Control" unique_id=559412865]
 layout_mode = 3
@@ -21,7 +27,7 @@ offset_top = 69.0
 offset_right = 683.0
 offset_bottom = 171.0
 text = "Hey kid..."
-label_settings = SubResource("LabelSettings_wdmn4")
+label_settings = SubResource("LabelSettings_wyqu5")
 metadata/_edit_use_anchors_ = true
 
 [node name="SkipPrompt" type="Label" parent="." unique_id=1773040871]

@@ -3,10 +3,16 @@
 [ext_resource type="AudioStream" uid="uid://bagqk1iukflj7" path="res://Our.mp3" id="1_qlpp7"]
 [ext_resource type="Script" uid="uid://ckt6rrx5p28c1" path="res://quota_scene.gd" id="1_uxeub"]
 [ext_resource type="FontFile" uid="uid://6at3ks7im8dv" path="res://Scripts/ZeroCollege.ttf" id="2_70cy4"]
+[ext_resource type="FontFile" uid="uid://paqvblxxkxp" path="res://Scenes/Panic.ttf" id="3_cy0ac"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_70cy4"]
+font = ExtResource("2_70cy4")
+font_size = 80
+font_color = Color(0.4627451, 0.22745098, 0.24705882, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uxeub"]
-font = ExtResource("2_70cy4")
-font_size = 47
+font = ExtResource("3_cy0ac")
+font_size = 80
 
 [node name="QuotaScene" type="Control" unique_id=1045139010]
 layout_mode = 3
@@ -21,7 +27,7 @@ offset_top = 69.0
 offset_right = 683.0
 offset_bottom = 171.0
 text = "Hey kid..."
-label_settings = SubResource("LabelSettings_uxeub")
+label_settings = SubResource("LabelSettings_70cy4")
 metadata/_edit_use_anchors_ = true
 
 [node name="SkipPrompt" type="Label" parent="." unique_id=51179315]
