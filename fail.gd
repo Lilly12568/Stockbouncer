@@ -14,11 +14,11 @@ var isLooping = false
 
 
 var dialogue = [
-	"Don't have the dough, huh?",
-	"Shame.",
-	"You really were a good kid.",
-	"Welp...",
-	"Til' next time, tiger."
+	"DON'T HAVE THE DOUGH, HUH?",
+	"SHAME.",
+	"YOU REALLY WERE A GOOD KID.",
+	"WELP...",
+	"TIL' NEXT TIME, TIGER."
 ]
 
 

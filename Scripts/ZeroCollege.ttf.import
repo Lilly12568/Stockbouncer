@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cntmti3b44d07"
-path="res://.godot/imported/Collegier.ttf-bd402a4f82cbfd809ee267609d6a7e29.fontdata"
+uid="uid://6at3ks7im8dv"
+path="res://.godot/imported/ZeroCollege.ttf-d780c9d077d0dfa4f773e22746dddb23.fontdata"
 
 [deps]
 
-source_file="res://Collegier.ttf"
-dest_files=["res://.godot/imported/Collegier.ttf-bd402a4f82cbfd809ee267609d6a7e29.fontdata"]
+source_file="res://Scripts/ZeroCollege.ttf"
+dest_files=["res://.godot/imported/ZeroCollege.ttf-d780c9d077d0dfa4f773e22746dddb23.fontdata"]
 
 [params]
 

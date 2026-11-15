@@ -13,10 +13,10 @@ var isLooping = false
 
 
 var dialogue = [
-	"You have one week to pay me back, kid.",
-	"Try using those tack tick apps\n or whatever they're called.",
-	"Be quick with your trades.",
-	"And don't make me pay you a visit."
+	"YOU HAVE ONE WEEK TO PAY ME BACK, KID.",
+	"YOU'RE GOOD WITH THOSE TICK TACK APPS\nOR WHATEVER THEY'RE CALLED.",
+	"PEOPLE ARE EASILY SWAYED. USE THAT\nTO YOUR ADVANTAGE.",
+	"DON'T MAKE ME PAY YOU ANOTHER VISIT."
 ]
 
 

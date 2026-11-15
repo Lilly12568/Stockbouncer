@@ -13,9 +13,9 @@ var isLooping = false
 
 
 var dialogue = [
-	"Smart kid.",
-	"Don't get lazy, though.",
-	"I'll be back again soon."
+	"SMART KID.",
+	"DON'T GET LAZY, THOUGH.",
+	"I'LL BE BACK AGAIN SOON."
 ]
 
 

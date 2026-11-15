@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bi4d2rpedh71"]
 
 [ext_resource type="Script" uid="uid://dlfqau77rqtoy" path="res://pass.gd" id="1_bvjfu"]
-[ext_resource type="FontFile" uid="uid://cntmti3b44d07" path="res://Collegier.ttf" id="2_wdmn4"]
+[ext_resource type="FontFile" uid="uid://6at3ks7im8dv" path="res://Scripts/ZeroCollege.ttf" id="2_wdmn4"]
 [ext_resource type="AudioStream" uid="uid://bagqk1iukflj7" path="res://Our.mp3" id="2_wyqu5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wdmn4"]

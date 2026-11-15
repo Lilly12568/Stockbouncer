@@ -6,20 +6,25 @@
 [sub_resource type="LabelSettings" id="LabelSettings_uxeub"]
 font_size = 47
 
-[node name="QuotaScene" type="Node2D" unique_id=33731441]
+[node name="QuotaScene" type="Control" unique_id=1045139010]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_uxeub")
 
 [node name="TextLabel" type="Label" parent="." unique_id=1771245826]
 z_index = 1
+layout_mode = 0
 offset_left = 134.0
 offset_top = 69.0
 offset_right = 683.0
 offset_bottom = 171.0
 text = "Hey kid..."
 label_settings = SubResource("LabelSettings_uxeub")
+metadata/_edit_use_anchors_ = true
 
 [node name="SkipPrompt" type="Label" parent="." unique_id=51179315]
 z_index = 1
+layout_mode = 0
 offset_left = 57.0
 offset_top = 581.0
 offset_right = 606.0
@@ -27,11 +32,14 @@ offset_bottom = 683.0
 scale = Vector2(0.43598008, 0.43598008)
 text = "Press F to skip"
 label_settings = SubResource("LabelSettings_uxeub")
+metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="ColorRect" parent="." unique_id=278268469]
+layout_mode = 0
 offset_right = 1168.0
 offset_bottom = 659.0
 color = Color(3.6098065e-08, 0.069158524, 0.096017025, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="DialogueSound" type="AudioStreamPlayer2D" parent="." unique_id=2135946105]
 stream = ExtResource("1_qlpp7")
