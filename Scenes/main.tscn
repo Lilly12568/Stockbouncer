@@ -188,6 +188,10 @@ script = ExtResource("12_6iyac")
 transform = Transform3D(0.020705432, 0, 0.9997856, 0, 1, 0, -0.9997856, 0, 0.020705432, -1.5126243, 2.5585117, -0.070457816)
 script = ExtResource("11_d1ilt")
 
+[node name="Label3D" type="Label3D" parent="Monitor1" unique_id=287470769]
+transform = Transform3D(0.8173707, -0.051123854, -0.5738393, 0, 0.9960549, -0.088739425, 0.57611215, 0.072533, 0.8141461, 2.8782578, 0.25974488, 1.0633278)
+text = " <-- News goes live here!"
+
 [node name="InsiderTradingGameCable2" type="MeshInstance3D" parent="." unique_id=183404477]
 transform = Transform3D(0.012596332, -0.25886226, 0.15606344, 0.30183566, 0.019115929, 0.0073455535, -0.016146466, 0.15539965, 0.25906444, -1.4881909, 2.6479506, 1.3539718)
 mesh = ExtResource("13_k12tt")
@@ -258,5 +262,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0070553, 4.3164063, -11.176
 mesh = SubResource("BoxMesh_lfxu0")
 surface_material_override/0 = ExtResource("6_6iyac")
 
+[connection signal="finished" from="Player2/Camera3D/GameplayMusic" to="Player2/Camera3D" method="_on_gameplay_music_finished"]
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="days_timer" to="." method="_on_days_timer"]

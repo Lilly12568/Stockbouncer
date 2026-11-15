@@ -14,6 +14,7 @@ extends Camera3D
 
 @onready var camera_inSound: AudioStreamPlayer3D = $WooshInSound
 @onready var camera_outSound: AudioStreamPlayer3D = $WooshOutSound
+@onready var gameplay_music: AudioStreamPlayer3D = $GameplayMusic
 
 var moving = false
 var returning = false
@@ -125,3 +126,8 @@ func ReturnCam():
 	can_return = false
 	camera_outSound.pitch_scale = RandomNumberGenerator.new().randf_range(0.8, 1.2)
 	camera_outSound.play()
+
+
+func _on_gameplay_music_finished() -> void:
+			# Start dialogue audio and enable looping
+		gameplay_music.play()
