@@ -3,6 +3,9 @@ extends "res://Scenes/monitor_template.gd"
 var low_at = 2001
 var high_at = -1
 
+@onready var buy_sound: AudioStreamPlayer3D = $BuySound
+@onready var sell_sound: AudioStreamPlayer3D = $SellSound
+
 func _process(delta: float) -> void:
 	if Variables.monitors["1"] == null:
 		$"Screen".visible = false
@@ -49,10 +52,11 @@ func rotate_right(camera: Node, event: InputEvent, event_position: Vector3, norm
 	refresh_screen()
 
 func buy_stock() -> void:
-	print("buying stock")
 	if Variables.monitors["1"] != null:
+		buy_sound.play()
 		Variables.buy_stock(Variables.unlocked[Variables.monitors["1"]])
 
 func sell_stock() -> void:
 	if Variables.monitors["1"] != null:
+		sell_sound.play()
 		Variables.sell_stock(Variables.unlocked[Variables.monitors["1"]])
