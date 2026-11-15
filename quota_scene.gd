@@ -62,4 +62,5 @@ func play_sequence():
 	# Switch scene once all passages are finished
 	Variables.days = 7
 	Variables.money -= Variables.quota
+	Variables.quota = int(Variables.quota * 1.3)
 	get_tree().change_scene_to_file(next_scene)

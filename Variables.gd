@@ -292,7 +292,7 @@ func tick_days() -> void:
 			get_tree().change_scene_to_file("res://quota_scene.tscn")
 		else:
 			get_tree().change_scene_to_file("res://fail.tscn")
-		
+
 
 func rotate_left(event: InputEvent, monitor: String) -> void:
 	if event is InputEventMouseButton and monitors[monitor] != null:
