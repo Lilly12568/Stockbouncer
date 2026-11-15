@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cdmmqpt5e2vcq"]
+
+[ext_resource type="Script" uid="uid://c8jbdu331h73k" path="res://fail.gd" id="1_cxby8"]
+[ext_resource type="AudioStream" uid="uid://bagqk1iukflj7" path="res://Our.mp3" id="2_vc31e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0lw3l"]
+font_size = 47
+
+[node name="Fail" type="Node2D" unique_id=1406408564]
+script = ExtResource("1_cxby8")
+
+[node name="TextLabel" type="Label" parent="." unique_id=2041381976]
+z_index = 1
+offset_left = 134.0
+offset_top = 69.0
+offset_right = 683.0
+offset_bottom = 171.0
+text = "Hey kid..."
+label_settings = SubResource("LabelSettings_0lw3l")
+metadata/_edit_use_anchors_ = true
+
+[node name="SkipPrompt" type="Label" parent="." unique_id=799518832]
+z_index = 1
+offset_left = 57.0
+offset_top = 581.0
+offset_right = 606.0
+offset_bottom = 683.0
+scale = Vector2(0.43598008, 0.43598008)
+text = "Press F to skip"
+label_settings = SubResource("LabelSettings_0lw3l")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="ColorRect" parent="." unique_id=1603482578]
+offset_right = 1168.0
+offset_bottom = 659.0
+color = Color(3.6098065e-08, 0.069158524, 0.096017025, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueSound" type="AudioStreamPlayer2D" parent="." unique_id=1015666232]
+stream = ExtResource("2_vc31e")

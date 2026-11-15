@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bc7gxnu46qdgf"]
+
+[ext_resource type="AudioStream" uid="uid://bagqk1iukflj7" path="res://Our.mp3" id="1_qlpp7"]
+[ext_resource type="Script" uid="uid://ckt6rrx5p28c1" path="res://quota_scene.gd" id="1_uxeub"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uxeub"]
+font_size = 47
+
+[node name="QuotaScene" type="Node2D" unique_id=33731441]
+script = ExtResource("1_uxeub")
+
+[node name="TextLabel" type="Label" parent="." unique_id=1771245826]
+z_index = 1
+offset_left = 134.0
+offset_top = 69.0
+offset_right = 683.0
+offset_bottom = 171.0
+text = "Hey kid..."
+label_settings = SubResource("LabelSettings_uxeub")
+
+[node name="SkipPrompt" type="Label" parent="." unique_id=51179315]
+z_index = 1
+offset_left = 57.0
+offset_top = 581.0
+offset_right = 606.0
+offset_bottom = 683.0
+scale = Vector2(0.43598008, 0.43598008)
+text = "Press F to skip"
+label_settings = SubResource("LabelSettings_uxeub")
+
+[node name="Background" type="ColorRect" parent="." unique_id=278268469]
+offset_right = 1168.0
+offset_bottom = 659.0
+color = Color(3.6098065e-08, 0.069158524, 0.096017025, 1)
+
+[node name="DialogueSound" type="AudioStreamPlayer2D" parent="." unique_id=2135946105]
+stream = ExtResource("1_qlpp7")
