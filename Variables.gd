@@ -282,9 +282,9 @@ func rotate_left(event: InputEvent, monitor: String) -> void:
 	if event is InputEventMouseButton and monitors[monitor] != null:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if monitors[monitor] == 0:
-				get_parent().monitors[monitor] = len(get_parent().unlocked) - 1
+				monitors[monitor] = len(unlocked) - 1
 			else:
-				get_parent().monitors[monitor] -= 1
+				monitors[monitor] -= 1
 
 func rotate_right(event: InputEvent, monitor: String) -> void:
 	if event is InputEventMouseButton and monitors[monitor] != null:
