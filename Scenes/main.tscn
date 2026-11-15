@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dcmj0b611js14" path="res://Scenes/main.gd" id="1_6bp64"]
 [ext_resource type="Material" uid="uid://1pcsbs1mhrsg" path="res://Meshes/Speaker/M_Speaker.tres" id="2_jjvhh"]
 [ext_resource type="ArrayMesh" uid="uid://dntvowk5u7fhx" path="res://Meshes/Speaker/InsiderTradingGame_Speaker.fbx" id="3_kry3j"]
-[ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://43kr82ecvhxv" path="res://Scenes/NewsMonitor.tscn" id="4_cbgmd"]
 [ext_resource type="PackedScene" uid="uid://da1ujk5wh3sc3" path="res://Scenes/mainmonitor.tscn" id="5_cbgmd"]
 [ext_resource type="Script" uid="uid://cg1xcrc5ym7d8" path="res://Scenes/camera_3d.gd" id="6_6bp64"]
 [ext_resource type="Material" uid="uid://bnieva1vfiwvm" path="res://new_standard_material_3d.tres" id="6_6iyac"]
@@ -53,9 +53,8 @@ transform = Transform3D(0.30741554, 0.25797594, 1.1276487e-08, -7.050294e-16, -1
 material_override = ExtResource("2_jjvhh")
 mesh = ExtResource("3_kry3j")
 
-[node name="InsiderTradingGameMonitor2" type="MeshInstance3D" parent="." unique_id=1460953498]
-transform = Transform3D(1.2029198, 0.75209045, -0.045775834, 0.02634782, 0.044194266, 1.418487, 0.7530218, -1.2029784, 0.023492843, -1.3300515, 3.0161443, -1.7347894)
-mesh = ExtResource("4_jjvhh")
+[node name="InsiderTradingGameMonitor2" parent="." unique_id=1108968398 instance=ExtResource("4_cbgmd")]
+transform = Transform3D(0.8797405, 0.074398525, -0.5515965, -0.10784443, 1.0349178, -0.032412756, 0.5460434, 0.084533244, 0.8822857, -1.3300515, 3.0161443, -1.7347894)
 
 [node name="MainMonitor" parent="." unique_id=1031749076 instance=ExtResource("5_cbgmd")]
 transform = Transform3D(0.39842045, 1.1670317e-08, -0.53294134, 0.53294134, -2.3295609e-08, 0.39842045, -1.1670316e-08, -0.6654062, -2.3295607e-08, -0.478275, 1.7580156, -0.015014768)
