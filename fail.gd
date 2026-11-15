@@ -8,14 +8,26 @@ extends Control
 
 @onready var dialogue_sound: AudioStreamPlayer2D = $DialogueSound
 @onready var text_label: Label = $TextLabel
+@onready var fail_objects = $FailObjects
 
 var isLooping = false
 
 
 var dialogue = [
-	"Shame...",
-	"You really were a good kid."
+	"Don't have the dough, huh?",
+	"Shame.",
+	"You really were a good kid.",
+	"Welp...",
+	"Til' next time, tiger."
 ]
+
+
+func _on_retry_button_pressed():
+	get_tree().change_scene_to_file("res://introsequence.tscn")
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()
 
 
 func _ready():
@@ -56,4 +68,5 @@ func play_sequence():
 		await get_tree().create_timer(text_wait_time).timeout
 
 	# Switch scene once all passages are finished
-	get_tree().change_scene_to_file(next_scene)
+	fail_objects.visible = true
+	text_label.visible = false

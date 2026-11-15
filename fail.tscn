@@ -6,11 +6,17 @@
 [sub_resource type="LabelSettings" id="LabelSettings_0lw3l"]
 font_size = 47
 
-[node name="Fail" type="Node2D" unique_id=1406408564]
+[sub_resource type="LabelSettings" id="LabelSettings_lfxu0"]
+font_size = 128
+
+[node name="Fail" type="Control" unique_id=1552101873]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_cxby8")
 
 [node name="TextLabel" type="Label" parent="." unique_id=2041381976]
 z_index = 1
+layout_mode = 0
 offset_left = 134.0
 offset_top = 69.0
 offset_right = 683.0
@@ -19,18 +25,8 @@ text = "Hey kid..."
 label_settings = SubResource("LabelSettings_0lw3l")
 metadata/_edit_use_anchors_ = true
 
-[node name="SkipPrompt" type="Label" parent="." unique_id=799518832]
-z_index = 1
-offset_left = 57.0
-offset_top = 581.0
-offset_right = 606.0
-offset_bottom = 683.0
-scale = Vector2(0.43598008, 0.43598008)
-text = "Press F to skip"
-label_settings = SubResource("LabelSettings_0lw3l")
-metadata/_edit_use_anchors_ = true
-
 [node name="Background" type="ColorRect" parent="." unique_id=1603482578]
+layout_mode = 0
 offset_right = 1168.0
 offset_bottom = 659.0
 color = Color(3.6098065e-08, 0.069158524, 0.096017025, 1)
@@ -38,3 +34,33 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DialogueSound" type="AudioStreamPlayer2D" parent="." unique_id=1015666232]
 stream = ExtResource("2_vc31e")
+
+[node name="FailObjects" type="Node2D" parent="." unique_id=149012439]
+visible = false
+
+[node name="Label" type="Label" parent="FailObjects" unique_id=266333972]
+offset_left = 221.0
+offset_top = 165.0
+offset_right = 955.0
+offset_bottom = 340.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_lfxu0")
+
+[node name="RetryButton" type="Button" parent="FailObjects" unique_id=2066349519]
+offset_left = 517.0
+offset_top = 334.0
+offset_right = 702.0
+offset_bottom = 416.0
+theme_override_font_sizes/font_size = 54
+text = "RETRY"
+
+[node name="QuitButton" type="Button" parent="FailObjects" unique_id=407989660]
+offset_left = 537.0
+offset_top = 435.0
+offset_right = 648.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 43
+text = "QUIT"
+
+[connection signal="pressed" from="FailObjects/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="FailObjects/QuitButton" to="." method="_on_quit_button_pressed"]
