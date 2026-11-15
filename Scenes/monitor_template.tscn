@@ -201,15 +201,15 @@ font_size = 21
 transform = Transform3D(8.179732e-16, -0.42810464, -1.8713045e-08, -1.8713045e-08, -1.8713047e-08, 0.42810458, -0.42810458, -9.0654665e-23, -1.8713045e-08, 0.375, 0.008, 0)
 text = "[PRICE]"
 
-[node name="Label3D4" type="Label3D" parent="Screen" unique_id=697464217]
+[node name="MinPrice" type="Label3D" parent="Screen" unique_id=697464217]
 transform = Transform3D(4.8188737e-16, -0.25220656, -1.1024297e-08, -1.1024297e-08, -1.1024298e-08, 0.25220653, -0.25220653, -5.3406805e-23, -1.1024297e-08, -0.3606432, 0.008359082, 0.53777623)
 text = "[MIN PRICE]"
 
-[node name="Label3D5" type="Label3D" parent="Screen" unique_id=1276453753]
+[node name="MaxPrice" type="Label3D" parent="Screen" unique_id=1276453753]
 transform = Transform3D(4.8188737e-16, -0.25220656, -1.1024297e-08, -1.1024297e-08, -1.1024298e-08, 0.25220653, -0.25220653, -5.3406805e-23, -1.1024297e-08, -0.3606432, 0.008359067, 0.18945852)
 text = "[MAX PRICE]"
 
-[node name="Label3D6" type="Label3D" parent="Screen" unique_id=1557594148]
+[node name="UD" type="Label3D" parent="Screen" unique_id=1557594148]
 transform = Transform3D(4.8188737e-16, -0.25220656, -1.1024297e-08, -1.1024297e-08, -1.1024298e-08, 0.25220653, -0.25220653, -5.3406805e-23, -1.1024297e-08, -0.3606432, 0.008359052, -0.14182205)
 text = "[UP/DOWN]"
 
@@ -225,26 +225,26 @@ mesh = SubResource("PlaneMesh_odlsx")
 transform = Transform3D(1.9106853e-15, 7.1054274e-15, 0.26030982, -4.371138e-08, 0.9999999, 8.881784e-16, -0.9999999, -4.371138e-08, 4.973702e-16, 0, 0.003, 0)
 mesh = SubResource("PlaneMesh_odlsx")
 
-[node name="BuyArea" type="Area3D" parent="." unique_id=1550920083]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.051578283, 0)
+[node name="BuyArea" type="Area3D" parent="Screen" unique_id=1550920083]
+transform = Transform3D(1.9106853e-15, -1, -4.371138e-08, -4.371138e-08, -4.3711385e-08, 0.9999999, -0.9999999, -2.1175819e-22, -4.371138e-08, 0.052523732, -0.032969885, 0.00015544887)
 
-[node name="BuyButton" type="CollisionShape3D" parent="BuyArea" unique_id=106285915]
+[node name="BuyButton" type="CollisionShape3D" parent="Screen/BuyArea" unique_id=106285915]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39697266, -0.31347656, 0)
 shape = SubResource("BoxShape3D_hjb8m")
 
-[node name="Label3D" type="Label3D" parent="BuyArea/BuyButton" unique_id=332624632]
+[node name="Label3D" type="Label3D" parent="Screen/BuyArea/BuyButton" unique_id=332624632]
 transform = Transform3D(0.50664973, 0, 0, 0, 0.50664973, 0, 0, 0, 0.50664973, 0, 0, 0.03978029)
 modulate = Color(0.7337808, 0.32588822, 0.23898584, 1)
 text = "BUY"
 
-[node name="SellArea" type="Area3D" parent="." unique_id=1091563934]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07997376, 0)
+[node name="SellArea" type="Area3D" parent="Screen" unique_id=1091563934]
+transform = Transform3D(1.9106853e-15, -1, -4.371138e-08, -4.371138e-08, -4.3711385e-08, 0.9999999, -0.9999999, -2.1175819e-22, -4.371138e-08, 0.080919206, -0.032969885, 0.00015544887)
 
-[node name="SellButton" type="CollisionShape3D" parent="SellArea" unique_id=732744789]
+[node name="SellButton" type="CollisionShape3D" parent="Screen/SellArea" unique_id=732744789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371521, -0.2930603, -0.016784668)
 shape = SubResource("BoxShape3D_r6c0r")
 
-[node name="Label3D2" type="Label3D" parent="SellArea/SellButton" unique_id=1506607154]
+[node name="Label3D2" type="Label3D" parent="Screen/SellArea/SellButton" unique_id=1506607154]
 transform = Transform3D(0.50664973, 0, 0, 0, 0.50664973, 0, 0, 0, 0.50664973, -0.015381662, 0.0070943236, 0.056564957)
 modulate = Color(0.51148236, 0.7060947, 0.35637787, 1)
 text = "SELL"
@@ -261,5 +261,7 @@ shape = SubResource("BoxShape3D_g2mn5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6200744, 0.39804077, 0.027433917)
 shape = SubResource("BoxShape3D_ucim2")
 
+[connection signal="input_event" from="Screen/BuyArea" to="." method="_on_buy_area_input_event"]
+[connection signal="input_event" from="Screen/SellArea" to="." method="_on_sell_area_input_event"]
 [connection signal="input_event" from="LeftStockArea" to="." method="_on_left_input_button_event"]
 [connection signal="input_event" from="RightStockArea" to="." method="_on_right_stock_area_input_event"]

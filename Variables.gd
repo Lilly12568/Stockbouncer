@@ -58,18 +58,18 @@ var stories = {
 				"%c wins award for clean energy use! (%p %s)",
 				"Engineers at %c speak out about their GREAT working conditions! (%p %s)",
 				"%c ranked top 3 worldwide for ENERGY EFFICIENCY! (%p %s)",
-                "%c discovers NANOBOTS! (%p %s)"
+				"%c discovers NANOBOTS! (%p %s)"
 			],
 			"random":[
 				"Big changes at %c... What will happen?? (%p %s)",
 				"New CEO takes over %c in CONTROVERSIAL decision! (%p %s)",
-                "MASSIVE workforce shift at %c. Will they thrive or collapse?! (%p %s)"
+				"MASSIVE workforce shift at %c. Will they thrive or collapse?! (%p %s)"
 			],
 			"bad": [
 				"%c batteries EXPLODING in rain! (%p %s)",
 				"Cobalt miners STRIKE at %c (%p %s)",
 				"%c products found OBSOLETE in three days! (%p %s)",
-                "%c ranked #1 WORST tech company of 2026! (%p %s)"
+				"%c ranked #1 WORST tech company of 2026! (%p %s)"
 			]
 		},
 		"shopping": {
@@ -77,18 +77,18 @@ var stories = {
 				"%c ranked #1 for Christmas spending! (%p %s)",
 				"Shipments at %c slated to shipe 500% faster! (%p %s)",
 				"10 reasons why buying at %c is all the rage! (%p %s)",
-                "Strapped for cash? %c is the king of budget! (%p %s)"
+				"Strapped for cash? %c is the king of budget! (%p %s)"
 			],
 			"random":[
 				"Big changes at %c... What will happen?? (%p %s)",
 				"New CEO takes over %c in CONTROVERSIAL decision! (%p %s)",
-                "MASSIVE workforce shift at %c. Will they thrive or collapse?! (%p %s)"
+				"MASSIVE workforce shift at %c. Will they thrive or collapse?! (%p %s)"
 			],
 			"bad": [
 				"%c discovered shipping DRUGS OVERSEAS! (%p %s)",
 				"Contraband found in %c shipments WORLDWIDE! (%p %s)",
 				"New %c workforce found to be made totally of shrimp! (%p %s)",
-                "AWFUL deals found at %c. (%p %s)"
+				"AWFUL deals found at %c. (%p %s)"
 			]
 		},
 		"fashion": {
@@ -97,12 +97,12 @@ var stories = {
 				"Every celebrity wore %c to the SAME PARTY! (%p %s)",
 				"%c clothing shown to attract ALL THE BABES! (%p %s)",
 				"Study shows women wearing %c have NO PERIOD CRAMPS! (%p %s)",
-                "Want smoother skin? Wear %c, study shows! (%p %s)"
+				"Want smoother skin? Wear %c, study shows! (%p %s)"
 			],
 			"random":[
 				"Big changes at %c... What will happen?? (%p %s)",
 				"New CEO takes over %c in CONTROVERSIAL decision! (%p %s)",
-                "MASSIVE workforce shift at %c. Will they thrive or collapse?! (%p %s)"
+				"MASSIVE workforce shift at %c. Will they thrive or collapse?! (%p %s)"
 			],
 			"bad": [
 				"%c is OUT. Streaking is in! (%p %s)",
@@ -111,7 +111,7 @@ var stories = {
 				"%c clothing found filled with MITES! (%p %s)",
 				"%c discovered using CHILD LABOUR! (%p %s)",
 				"Feeling trendy? DON'T wear %c! (%p %s)",
-                "%c factories set on fire WORLDWIDE! (%p %s)"
+				"%c factories set on fire WORLDWIDE! (%p %s)"
 			]
 		},
 		"food": {
@@ -119,52 +119,52 @@ var stories = {
 				"Cancer patient eats at %c, is instantly cured! (%p %s)",
 				"Critics LOVE the new meals at %c! (%p %s)",
 				"Make-A-Wish kid earns lifetime supply of %c! (%p %s)",
-                "%c rated most eco-friendly food 3rd year in a row. (%p %s)"
+				"%c rated most eco-friendly food 3rd year in a row. (%p %s)"
 			],
 			"random":[
 				"Big changes at %c... What will happen?? (%p %s)",
 				"New CEO takes over %c in CONTROVERSIAL decision! (%p %s)",
-                "MASSIVE workforce shift at %c. Will they thrive or collapse?! (%p %s)"
+				"MASSIVE workforce shift at %c. Will they thrive or collapse?! (%p %s)"
 			],
 			"bad": [
 				"%c employees found SPITTING IN FOOD! (%p %s)",
 				"%c failed EVERY HEALTH INSPECTION! (%p %s)",
 				"%c reviewers HATE the new food! (%p %s)",
-                "Food at %c given near 38% mortality rate! (%p %s)"
+				"Food at %c given near 38% mortality rate! (%p %s)"
 			]
 		}
 	},
 	"category": {
 		"tech": {
 			"good": [
-                "CLEAN ENERGY causes tech sector to SOAR! (%p tech)"
+				"CLEAN ENERGY causes tech sector to SOAR! (%p tech)"
 			],
 			"bad": [
-                "WORLDWIDE BLACKOUT as tech sector CRACKS! (%p tech)"
+				"WORLDWIDE BLACKOUT as tech sector CRACKS! (%p tech)"
 			]
 		},
 		"shopping": {
 			"good": [
-                "Shopping sector BOOMS as global economy grows (%p shopping)"
+				"Shopping sector BOOMS as global economy grows (%p shopping)"
 			],
 			"bad": [
-                "GLOBAL TARRIFS cuts resources to shopping sector! (%p shopping)"
+				"GLOBAL TARRIFS cuts resources to shopping sector! (%p shopping)"
 			]
 		},
 		"fashion": {
 			"good": [
-                "Fashion industry THRIVING under new child labor laws! (%p fashion)"
+				"Fashion industry THRIVING under new child labor laws! (%p fashion)"
 			],
 			"bad": [
-                "Fashion industry COLLAPSES under new silk costs! (%p fashion)"
+				"Fashion industry COLLAPSES under new silk costs! (%p fashion)"
 			]
 		},
 		"food": {
 			"good": [
-                "Fast food sector expands RAPIDLY due to lowered food health restrictions! (%p food)"
+				"Fast food sector expands RAPIDLY due to lowered food health restrictions! (%p food)"
 			],
 			"bad": [
-                "Fast food sector PLUMMETS due to new health and safety guidelines (%p food)"
+				"Fast food sector PLUMMETS due to new health and safety guidelines (%p food)"
 			]
 		}
 	}
@@ -190,23 +190,35 @@ var money = 500
 
 var days = 7
 
+var playing = false
+
+var inventory = {}
+
+var bought_in = {}
+
 func start() -> void:
-	rng = RandomNumberGenerator.new()
-	counter = 0
-	stocks = {}
-	history = {}
-	stories_saved = []
-	stories_shown = {"saveable":[],"read":[]}
-	monitors = {"1": null, "2": null, "3": null, "4": null}
-	unlocked = []
-	price = 0
-	quota = 750
-	money = 500
-	days = 7
-	for cat in companies:
-		for cmp in companies[cat]:
-			stocks[companies[cat][cmp]] = round_to_decimal(rng.randf_range(100, 1000), 2)
-			history[companies[cat][cmp]] = [[stocks[companies[cat][cmp]], "none"]]
+	if not playing:
+		playing = true
+		rng = RandomNumberGenerator.new()
+		counter = 0
+		stocks = {}
+		history = {}
+		stories_saved = []
+		stories_shown = {"saveable":[],"read":[]}
+		monitors = {"1": null, "2": null, "3": null, "4": null}
+		unlocked = []
+		price = 0
+		quota = 750
+		money = 500
+		days = 7
+		inventory = {}
+		bought_in = {}
+		for cat in companies:
+			for cmp in companies[cat]:
+				inventory[companies[cat][cmp]] = 0
+				bought_in[companies[cat][cmp]] = 0
+				stocks[companies[cat][cmp]] = round_to_decimal(rng.randf_range(100, 1000), 2)
+				history[companies[cat][cmp]] = [[stocks[companies[cat][cmp]], "none"]]
 
 func tick_stocks() -> void:
 	var blocked_stocks = tick_stories()
@@ -271,6 +283,8 @@ func tick_stories() -> Array:
 
 func tick_days() -> void:
 	days -= 1
+	if days <= 0:
+		get_tree().change_scene_to_file("res://quota_scene.tscn")
 
 func rotate_left(event: InputEvent, monitor: String) -> void:
 	if event is InputEventMouseButton and monitors[monitor] != null:
@@ -293,3 +307,20 @@ func random_path() -> Array[String]:
 	var cmp = companies[cat].keys().pick_random()
 	var stck = companies[cat][cmp]
 	return [cat, cmp, stck]
+
+func buy_stock(stock: String) -> void:
+	var amount = 1
+	var value = stocks[stock] * amount
+	if stock in stocks and amount > 0 and value <= money:
+		money -= round_to_decimal(value, 2)
+		inventory[stock] += amount
+		bought_in[stock] += round_to_decimal(value, 2)
+
+
+func sell_stock(stock: String) -> void:
+	var amount = 1
+	var value = stocks[stock] * amount
+	if stock in stocks and amount > 0 and inventory[stock] >= amount:
+		inventory[stock] -= amount
+		money += round_to_decimal(value, 2)
+		bought_in[stock] -= round_to_decimal(value, 2)

@@ -28,6 +28,7 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_key_pressed(KEY_F):
+		Variables.days = 7
 		get_tree().change_scene_to_file(next_scene)
 
 
@@ -59,4 +60,5 @@ func play_sequence():
 		await get_tree().create_timer(text_wait_time).timeout
 
 	# Switch scene once all passages are finished
+	Variables.days = 7
 	get_tree().change_scene_to_file(next_scene)

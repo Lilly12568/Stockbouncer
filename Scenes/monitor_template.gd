@@ -70,3 +70,20 @@ func rotate_right(camera: Node, event: InputEvent, event_position: Vector3, norm
 
 func _on_right_stock_area_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	rotate_right(camera, event, event_position, normal, shape_idx)
+
+
+func _on_buy_area_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			buy_stock()
+
+func buy_stock() -> void:
+	print("c")
+
+func _on_sell_area_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			sell_stock()
+
+func sell_stock() -> void:
+	print("d")

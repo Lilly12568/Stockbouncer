@@ -145,7 +145,7 @@ scale = Vector2(2.8853955, 1)
 text = "V V V V V V V"
 
 [node name="days_timer" type="Timer" parent="." unique_id=1459921805]
-wait_time = 90.0
+wait_time = 5.0
 autostart = true
 
 [node name="InsiderTradingGameMouse" type="MeshInstance3D" parent="." unique_id=1329808753]

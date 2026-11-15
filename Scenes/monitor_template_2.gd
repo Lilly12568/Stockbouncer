@@ -23,6 +23,13 @@ func refresh_screen() -> void:
 			var dot = $Screen.get_node("Dot" if i == 1 else "Dot%d" % i)
 			dot.position = Vector3(0, dot.position.y, dot.position.z) + Vector3((0.3 - 0.6 * (Variables.history[code][i-1][0] - low) / (high - low)), 0, 0)
 		update_lines()
+		$Screen/MinPrice.text = str(low)
+		$Screen/MaxPrice.text = str(high)
+		if Variables.inventory[code] > 0:
+			$Screen/UD.text = "$" + str(Variables.round_to_decimal(average - (Variables.bought_in[code]/Variables.inventory[code]), 2))
+			$Screen/UD.modulate = Color(1, 0, 0) if Variables.round_to_decimal(average - (Variables.bought_in[code]/Variables.inventory[code]), 2) < 0 else Color(0, 1, 0)
+		else:
+			$Screen/UD.text = ""
 
 func rotate_left(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	Variables.rotate_left(event, "2")
@@ -31,3 +38,11 @@ func rotate_left(camera: Node, event: InputEvent, event_position: Vector3, norma
 func rotate_right(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	Variables.rotate_right(event, "2")
 	refresh_screen()
+
+func buy_stock() -> void:
+	if Variables.monitors["2"] != null:
+		Variables.buy_stock(Variables.unlocked[Variables.monitors["2"]])
+
+func sell_stock() -> void:
+	if Variables.monitors["2"] != null:
+		Variables.sell_stock(Variables.unlocked[Variables.monitors["2"]])
