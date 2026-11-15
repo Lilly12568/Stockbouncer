@@ -233,21 +233,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39697266, -0.31347656, 0)
 shape = SubResource("BoxShape3D_hjb8m")
 
 [node name="Label3D" type="Label3D" parent="Screen/BuyArea/BuyButton" unique_id=332624632]
-transform = Transform3D(0.50664973, 0, 0, 0, 0.50664973, 0, 0, 0, 0.50664973, 0, 0, 0.03978029)
+transform = Transform3D(0.50664973, 0, 0, 0, 0.50664973, 0, 0, 0, 0.50664973, -0.042678535, 0, 0.03978029)
 modulate = Color(0.7337808, 0.32588822, 0.23898584, 1)
-text = "BUY"
+text = "BUY (0.1)"
 
 [node name="SellArea" type="Area3D" parent="Screen" unique_id=1091563934]
 transform = Transform3D(1.9106853e-15, -1, -4.371138e-08, -4.371138e-08, -4.3711385e-08, 0.9999999, -0.9999999, -2.1175819e-22, -4.371138e-08, 0.080919206, -0.032969885, 0.00015544887)
 
 [node name="SellButton" type="CollisionShape3D" parent="Screen/SellArea" unique_id=732744789]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.371521, -0.2930603, -0.016784668)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.357952, -0.28721014, -0.016784668)
 shape = SubResource("BoxShape3D_r6c0r")
 
 [node name="Label3D2" type="Label3D" parent="Screen/SellArea/SellButton" unique_id=1506607154]
-transform = Transform3D(0.50664973, 0, 0, 0, 0.50664973, 0, 0, 0, 0.50664973, -0.015381662, 0.0070943236, 0.056564957)
+transform = Transform3D(0.50664973, 0, 0, 0, 0.50664973, 0, 0, 0, 0.50664973, 0.07690731, 0.0003683269, 0.056564957)
 modulate = Color(0.51148236, 0.7060947, 0.35637787, 1)
-text = "SELL"
+text = "SELL (0.1/X)"
 
 [node name="LeftStockArea" type="Area3D" parent="." unique_id=330540467]
 

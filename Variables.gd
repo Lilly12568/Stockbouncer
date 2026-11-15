@@ -312,7 +312,7 @@ func random_path() -> Array[String]:
 	return [cat, cmp, stck]
 
 func buy_stock(stock: String) -> void:
-	var amount = 1
+	var amount = 0.1
 	var value = stocks[stock] * amount
 	if stock in stocks and amount > 0 and value <= money:
 		money -= round_to_decimal(value, 2)
@@ -321,7 +321,7 @@ func buy_stock(stock: String) -> void:
 
 
 func sell_stock(stock: String) -> void:
-	var amount = 1
+	var amount = 0.1
 	var value = stocks[stock] * amount
 	if stock in stocks and amount > 0 and inventory[stock] >= amount:
 		inventory[stock] -= amount

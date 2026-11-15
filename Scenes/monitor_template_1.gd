@@ -29,6 +29,7 @@ func refresh_screen() -> void:
 			$Screen/UD.modulate = Color(1, 0, 0) if Variables.round_to_decimal(average - (Variables.bought_in[code]/Variables.inventory[code]), 2) < 0 else Color(0, 1, 0)
 		else:
 			$Screen/UD.text = ""
+		$Screen/SellArea/SellButton/Label3D2.text = "SELL (0.1/" + str(Variables.inventory[code]) + ")"
 		update_lines()
 
 
