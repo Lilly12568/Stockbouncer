@@ -198,7 +198,6 @@ var bought_in = {}
 
 func start() -> void:
 	if not playing:
-		playing = true
 		rng = RandomNumberGenerator.new()
 		counter = 0
 		stocks = {}

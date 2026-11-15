@@ -33,13 +33,17 @@ func _on_buy_push(camera: Node, event: InputEvent, event_position: Vector3, norm
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if Variables.money < Variables.price:
-				purchase_success.play()
+				purchase_fail.play()
 				$Price.set("modulate",Color(1,0,0,1))
 				while $Price.get("modulate").g < 1:
 					$Price.set("modulate",Color(1,$Price.get("modulate").g + 0.01, $Price.get("modulate").b + 0.01,1))
 					await get_tree().create_timer(0.01).timeout
 			else:
-				purchase_fail.play()
+				if Variables.price == 0:
+					Variables.price = 100
+				else:
+					Variables.price = int(Variables.price * 1.5)
+				purchase_success.play()
 				Variables.money -= Variables.price
 				$"?".visible = false
 				$Code.visible = true
@@ -51,6 +55,8 @@ func _on_buy_push(camera: Node, event: InputEvent, event_position: Vector3, norm
 				$Company.text = stck[1]
 				if stck[2] not in Variables.unlocked:
 					Variables.unlocked.append(stck[2])
+				else:
+					Variables.money += Variables.price / 2
 				if len(Variables.unlocked) >= 1 and Variables.monitors["1"] == null:
 					Variables.monitors["1"] = 0
 				elif len(Variables.unlocked) >= 2 and Variables.monitors["2"] == null:
@@ -59,3 +65,8 @@ func _on_buy_push(camera: Node, event: InputEvent, event_position: Vector3, norm
 					Variables.monitors["3"] = 0
 				elif len(Variables.unlocked) >= 4 and Variables.monitors["4"] == null:
 					Variables.monitors["4"] = 0
+				await get_tree().create_timer(0.01).timeout
+				$"?".visible = true
+				$Code.visible = false
+				$Company.visible = false
+				$Icon.visible = false

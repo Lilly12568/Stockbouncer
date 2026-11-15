@@ -20,140 +20,140 @@ script = ExtResource("1_0d1ha")
 transform = Transform3D(-6.20448e-08, 1.4194189, 6.2044805e-08, 0, -6.204477e-08, 1.4194198, 1.4194195, 6.204477e-08, 2.7120646e-15, 0.036116973, 0, -0.036116973)
 mesh = ExtResource("1_n7lyd")
 
-[node name="News1" type="Area3D" parent="." unique_id=751143916]
+[node name="News6" type="Area3D" parent="." unique_id=751143916]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, 0.77110696, 0.012038991)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="News1" unique_id=33187635]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="News6" unique_id=33187635]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
-[node name="Label3D" type="Label3D" parent="News1" unique_id=230669409]
+[node name="Label3D" type="Label3D" parent="News6" unique_id=230669409]
 transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
 text = "NEWS!"
 font_size = 106
 
-[node name="steal" type="Label3D" parent="News1" unique_id=1529352743]
+[node name="steal" type="Label3D" parent="News6" unique_id=1529352743]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
 text = "steal
 "
 font_size = 47
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="News1" unique_id=1059423114]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="News6" unique_id=1059423114]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.0044454634, 0, 0)
 mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
-[node name="News2" type="Area3D" parent="." unique_id=243564482]
+[node name="News5" type="Area3D" parent="." unique_id=243564482]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, 0.4734416, 0.012038991)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="News2" unique_id=390971307]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="News5" unique_id=390971307]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
-[node name="Label3D" type="Label3D" parent="News2" unique_id=1377959834]
+[node name="Label3D" type="Label3D" parent="News5" unique_id=1377959834]
 transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
 text = "NEWS!"
 font_size = 106
 
-[node name="steal" type="Label3D" parent="News2" unique_id=1053733766]
+[node name="steal" type="Label3D" parent="News5" unique_id=1053733766]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
 text = "steal
 "
 font_size = 47
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="News2" unique_id=1276265475]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="News5" unique_id=1276265475]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.0044454634, 0, 0)
 mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
-[node name="News3" type="Area3D" parent="." unique_id=446481043]
+[node name="News4" type="Area3D" parent="." unique_id=446481043]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, 0.16395009, 0.012038991)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="News3" unique_id=1601134570]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="News4" unique_id=1601134570]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
-[node name="Label3D" type="Label3D" parent="News3" unique_id=2146538794]
+[node name="Label3D" type="Label3D" parent="News4" unique_id=2146538794]
 transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
 text = "NEWS!"
 font_size = 106
 
-[node name="steal" type="Label3D" parent="News3" unique_id=2037148880]
+[node name="steal" type="Label3D" parent="News4" unique_id=2037148880]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
 text = "steal
 "
 font_size = 47
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="News3" unique_id=1830025324]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="News4" unique_id=1830025324]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.0044454634, 0, 0)
 mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
-[node name="News4" type="Area3D" parent="." unique_id=1754544087]
+[node name="News3" type="Area3D" parent="." unique_id=1754544087]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, -0.15966946, 0.012038991)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="News4" unique_id=1071815137]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="News3" unique_id=1071815137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
-[node name="Label3D" type="Label3D" parent="News4" unique_id=655779043]
+[node name="Label3D" type="Label3D" parent="News3" unique_id=655779043]
 transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
 text = "NEWS!"
 font_size = 106
 
-[node name="steal" type="Label3D" parent="News4" unique_id=485746854]
+[node name="steal" type="Label3D" parent="News3" unique_id=485746854]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
 text = "steal
 "
 font_size = 47
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="News4" unique_id=1627142146]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="News3" unique_id=1627142146]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.0044454634, 0, 0)
 mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
-[node name="News5" type="Area3D" parent="." unique_id=1912981850]
+[node name="News2" type="Area3D" parent="." unique_id=1912981850]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, -0.46027362, 0.012038991)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="News5" unique_id=66440351]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="News2" unique_id=66440351]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
-[node name="Label3D" type="Label3D" parent="News5" unique_id=1410403878]
+[node name="Label3D" type="Label3D" parent="News2" unique_id=1410403878]
 transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
 text = "NEWS!"
 font_size = 106
 
-[node name="steal" type="Label3D" parent="News5" unique_id=1934332793]
+[node name="steal" type="Label3D" parent="News2" unique_id=1934332793]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
 text = "steal
 "
 font_size = 47
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="News5" unique_id=1582408962]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="News2" unique_id=1582408962]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.0044454634, 0, 0)
 mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
-[node name="News6" type="Area3D" parent="." unique_id=1599937610]
+[node name="News1" type="Area3D" parent="." unique_id=1599937610]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, -0.76941407, 0.012038991)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="News6" unique_id=194125143]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="News1" unique_id=194125143]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
-[node name="Label3D" type="Label3D" parent="News6" unique_id=1054295146]
+[node name="Label3D" type="Label3D" parent="News1" unique_id=1054295146]
 transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
 text = "NEWS!"
 font_size = 106
 
-[node name="steal" type="Label3D" parent="News6" unique_id=1408688818]
+[node name="steal" type="Label3D" parent="News1" unique_id=1408688818]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
 text = "steal
 "
 font_size = 47
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="News6" unique_id=1272944646]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="News1" unique_id=1272944646]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.0044454634, 0, 0)
 mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
