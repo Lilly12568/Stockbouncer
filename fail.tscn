@@ -21,12 +21,13 @@ script = ExtResource("1_cxby8")
 [node name="TextLabel" type="Label" parent="." unique_id=2041381976]
 z_index = 1
 layout_mode = 0
-offset_left = 134.0
-offset_top = 69.0
-offset_right = 683.0
-offset_bottom = 171.0
+offset_left = 321.025
+offset_top = 145.435
+offset_right = 870.025
+offset_bottom = 247.43506
 text = "Hey kid..."
 label_settings = SubResource("LabelSettings_0lw3l")
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="ColorRect" parent="." unique_id=1603482578]

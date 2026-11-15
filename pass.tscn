@@ -22,12 +22,13 @@ script = ExtResource("1_bvjfu")
 [node name="TextLabel" type="Label" parent="." unique_id=752912673]
 z_index = 1
 layout_mode = 0
-offset_left = 134.0
-offset_top = 69.0
-offset_right = 683.0
-offset_bottom = 171.0
+offset_left = 333.365
+offset_top = 128.595
+offset_right = 882.365
+offset_bottom = 230.59497
 text = "Hey kid..."
 label_settings = SubResource("LabelSettings_wyqu5")
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="SkipPrompt" type="Label" parent="." unique_id=1773040871]

@@ -115,19 +115,19 @@ autostart = true
 [node name="Control" type="Control" parent="." unique_id=1111080794 node_paths=PackedStringArray("camera")]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 209.0
+offset_left = 247.84
 offset_top = 553.0
-offset_right = 886.0
-offset_bottom = 629.0
+offset_right = 883.725
+offset_bottom = 600.355
 script = ExtResource("8_344ge")
 camera = NodePath("../Player2/Camera3D")
 
 [node name="Panel" type="Panel" parent="Control" unique_id=1407529355]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 26.0
-offset_right = 641.0
-offset_bottom = 66.0
+offset_left = 15.160004
+offset_top = 7.0
+offset_right = 628.16003
+offset_bottom = 47.0
 
 [node name="Label" type="Label" parent="Control/Panel" unique_id=1319572698]
 layout_mode = 0
