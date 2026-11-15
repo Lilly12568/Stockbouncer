@@ -214,15 +214,15 @@ transform = Transform3D(4.8188737e-16, -0.25220656, -1.1024297e-08, -1.1024297e-
 text = "[UP/DOWN]"
 
 [node name="MaxValueLine" type="MeshInstance3D" parent="Screen" unique_id=2023181558]
-transform = Transform3D(1.9106853e-15, 7.1054274e-15, 1, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 1.9106855e-15, -0.29905456, 0.0030300915, 0.0001554473)
+transform = Transform3D(1.9106853e-15, 7.1054274e-15, 1, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 1.9106855e-15, -0.3, 0.003, 0)
 mesh = SubResource("PlaneMesh_0j5qj")
 
 [node name="MinValueLine" type="MeshInstance3D" parent="Screen" unique_id=163113201]
-transform = Transform3D(1.9106853e-15, 7.1054274e-15, 1, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 1.9106855e-15, 0.30094546, 0.0030301213, 0.0001554473)
+transform = Transform3D(1.9106853e-15, 7.1054274e-15, 1, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 1.9106855e-15, 0.3, 0.003, 0)
 mesh = SubResource("PlaneMesh_odlsx")
 
 [node name="MidValueLine" type="MeshInstance3D" parent="Screen" unique_id=1738792860]
-transform = Transform3D(1.9106853e-15, 7.1054274e-15, 0.26030982, -4.371138e-08, 0.9999999, 8.881784e-16, -0.9999999, -4.371138e-08, 4.973702e-16, 0.0009454473, 0.0030301064, 0.0001554473)
+transform = Transform3D(1.9106853e-15, 7.1054274e-15, 0.26030982, -4.371138e-08, 0.9999999, 8.881784e-16, -0.9999999, -4.371138e-08, 4.973702e-16, 0, 0.003, 0)
 mesh = SubResource("PlaneMesh_odlsx")
 
 [node name="BuyArea" type="Area3D" parent="." unique_id=1550920083]

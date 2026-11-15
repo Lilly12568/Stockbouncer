@@ -1,5 +1,9 @@
 extends Node
 
+func round_to_decimal(value: float, decimal_places: int) -> float:
+	var factor = pow(10.0, decimal_places)
+	return round(value * factor) / factor
+
 var rng = RandomNumberGenerator.new()
 
 var counter = 0
@@ -201,7 +205,7 @@ func start() -> void:
 	days = 7
 	for cat in companies:
 		for cmp in companies[cat]:
-			stocks[companies[cat][cmp]] = rng.randf_range(100, 1000)
+			stocks[companies[cat][cmp]] = round_to_decimal(rng.randf_range(100, 1000), 2)
 			history[companies[cat][cmp]] = [stocks[companies[cat][cmp]]]
 
 func tick_stocks() -> void:
@@ -209,7 +213,7 @@ func tick_stocks() -> void:
 	for stock in stocks:
 		if stock in blocked_stocks:
 			continue
-		var add = rng.randf_range(-7.5, 7.5)
+		var add = round_to_decimal(rng.randf_range(-7.5, 7.5), 2)
 		var mvmt = ""
 		if stocks[stock] + add > 0 and stocks[stock] + add < 2000:
 			stocks[stock] += add
@@ -257,6 +261,7 @@ func tick_stories() -> Array:
 			if stry[1] == "single":
 				print(stocks[companies[stry[2]][stry[3]]])
 				stocks[companies[stry[2]][stry[3]]] += stocks[companies[stry[2]][stry[3]]] * (float(stry[4]) / 100)
+				stocks[companies[stry[2]][stry[3]]] = round_to_decimal(stocks[companies[stry[2]][stry[3]]], 2)
 				print(stocks[companies[stry[2]][stry[3]]])
 				blocked_stocks.append(companies[stry[2]][stry[3]])
 				history[companies[stry[2]][stry[3]]].append([stocks[companies[stry[2]][stry[3]]], "up" if stry[4] > 0 else "down"])
@@ -264,6 +269,7 @@ func tick_stories() -> Array:
 				for stock in companies[stry[2]].values():
 					print(stock + ": " + str(stocks[stock]))
 					stocks[stock] += stocks[stock] * (float(stry[4]) / 100)
+					stocks[stock] = round_to_decimal(stocks[stock], 2)
 					print(stock + ": " + str(stocks[stock]))
 					blocked_stocks.append(stock)
 					history[stock].append([stocks[stock], "up" if stry[4] > 0 else "down"])
