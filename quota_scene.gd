@@ -13,11 +13,11 @@ var isLooping = false
 
 
 var dialogue = [
-	"Guess who's back, kid.",
-	"I hope you scrounged up enough to pay me.",
-	"It's %a today, kid. Cough it up.",
-	"Smart kid. Don't get lazy, though.",
-	"I'll be back again soon."
+	"GUESS WHO'S BACK, KID.",
+	"I HOPE YOU SCROUNGED UP ENOUGH TO PAY ME.",
+	"IT'S %a TODAY, KID. COUGH IT UP.",
+	"SMART KID. DON'T GET LAZY, THOUGH.",
+	"I'LL BE BACK AGAIN SOON."
 ]
 
 

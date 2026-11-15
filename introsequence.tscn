@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://ccvb20p1lyceh"]
 
 [ext_resource type="Script" uid="uid://dfyqdontb8flg" path="res://introsequence.gd" id="1_h3qyj"]
+[ext_resource type="FontFile" uid="uid://6at3ks7im8dv" path="res://Scripts/ZeroCollege.ttf" id="2_hicge"]
 [ext_resource type="AudioStream" uid="uid://bagqk1iukflj7" path="res://Our.mp3" id="2_y0p50"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lfxu0"]
+font = ExtResource("2_hicge")
 font_size = 47
 
 [node name="Introsequence" type="Control" unique_id=678262062]
