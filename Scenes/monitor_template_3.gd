@@ -6,7 +6,8 @@ func _process(delta: float) -> void:
 	else:
 		$"Screen".visible = true
 		update_lines()
-		$Screen/Label3D.text = str(Variables.unlocked[Variables.monitors["3"]])
+		$Screen/Code.text = str(Variables.unlocked[Variables.monitors["3"]])
+		$Screen/CurrentPrice.text = str(Variables.stocks[Variables.unlocked[Variables.monitors["3"]]])
 
 func rotate_left(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	Variables.rotate_left(event, "3")
