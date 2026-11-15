@@ -35,3 +35,7 @@ func _on_buy_push(camera: Node, event: InputEvent, event_position: Vector3, norm
 			$Code.visible = true
 			$Company.visible = true
 			$Icon.visible = true
+			var stck = Variables.random_path()
+			$Icon.text = stck[2][0]
+			$Code.text = stck[2].lstrip(1)
+			$Company.text = stck[1]

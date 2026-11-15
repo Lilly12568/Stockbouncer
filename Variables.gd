@@ -6,45 +6,45 @@ var counter = 0
 
 var companies = {
     "tech": {
-        "Pear":"PEAR",
-        "Novidia":"NOIA",
-        "Macrohard":"MAFT",
-        "Goggle":"GGLE",
-        "Smasnug":"SMSG",
-        "Outel":"OUTL",
-        "AND":"AND",
-        "Huaiwei":"HIAW"
+        "Pear":"ÐPEAR",
+        "Novidia":"ÐNOIA",
+        "Macrohard":"ÐMAFT",
+        "Goggle":"ÐGGLE",
+        "Smasnug":"ÐSMSG",
+        "Outel":"ÐOUTL",
+        "AND":"ÐAND",
+        "Huaiwei":"ÐHIAW"
     },
     "shopping": {
-        "Wolmart":"WMT",
-        "Amazoff":"AMZF",
-        "EBuy":"EBY",
-        "AliBabiš":"ABS",
-        "PriceCo":"PRCO",
-        "Azla.cz":"AZLA",
-        "Houska.cz":"HSKA",
-        "Tescon":"TSCN"
+        "Wolmart":"ÓWMT",
+        "Amazoff":"ÓAMZF",
+        "EBuy":"ÓEBY",
+        "AliBabiš":"ÓABS",
+        "PriceCo":"ÓPRCO",
+        "Azla.cz":"ÓAZLA",
+        "Houska.cz":"ÓHSKA",
+        "Tescon":"ÓTSCN"
     },
     "fashion": {
-        "Louis Crouton":"LICN",
-        "Baddidas":"BDDS",
-        "Chapell":"CHPL",
-        "Mike":"MKE",
-        "Tuna":"TNA",
-        "Over Armor":"OVAR",
-        "Old Balance":"ODBL",
-        "Kevin Clein":"CNKN"
+        "Louis Crouton":"ÒLICN",
+        "Baddidas":"ÒBDDS",
+        "Chapell":"ÒHPL",
+        "Mike":"ÒMKE",
+        "Tuna":"ÒTNA",
+        "Over Armor":"ÒOVAR",
+        "Old Balance":"ÒODBL",
+        "Kevin Clein":"ÒCNKN"
     },
     "food": {
-        "Burger Queen":"BGQ",
-        "Four Guys":"FRGS",
-        "McDaniels":"MCDS",
-        "PFC":"PFC",
-        "Chickpotle":"CKPL",
-        "Moonbucks":"MBKS",
-        "Metro":"MTR",
-        "Pizza House":"PZSH",
-        "Sandwich Avenue":"SWAV"
+        "Burger Queen":"ÑBGQ",
+        "Four Guys":"ÑFRGS",
+        "McDaniels":"ÑMCDS",
+        "PFC":"ÑPFC",
+        "Chickpotle":"ÑCKPL",
+        "Moonbucks":"ÑMBKS",
+        "Metro":"ÑMTR",
+        "Pizza House":"ÑPZSH",
+        "Sandwich Avenue":"ÑSWAV"
     }
 }
 
@@ -233,10 +233,10 @@ func tick_stories() -> Array:
     var blocked_stocks = []
     if counter >= 5:
         counter = 0
-        var sngle = stories.keys()[rng.randi_range(0, len(stories)-1)]
-        var cat = stories[sngle].keys()[rng.randi_range(0, len(stories[sngle])-1)]
-        var company = companies[cat].keys()[rng.randi_range(0, len(companies[cat])-1)]
-        var story_type = stories[sngle][cat].keys()[rng.randi_range(0, len(stories[sngle][cat])-1)]
+        var sngle = stories.keys().pick_random()
+        var cat = stories[sngle].keys().pick_random()
+        var company = companies[cat].keys().pick_random()
+        var story_type = stories[sngle][cat].keys().pick_random()
         var percentage = 0
         if story_type == "good":
             percentage = rng.randi_range(0,15)
@@ -244,7 +244,7 @@ func tick_stories() -> Array:
             percentage = rng.randi_range(-15,0)
         else:
             percentage = rng.randi_range(-15, 15)
-        var story = [stories[sngle][cat][story_type][rng.randi_range(0, len(stories[sngle][cat][story_type])-1)], sngle, cat, company, percentage, 5]
+        var story = [stories[sngle][cat][story_type].pick_random(), sngle, cat, company, percentage, 5]
         print(story)
         stories_shown["saveable"].append(story)
     else:
@@ -288,3 +288,9 @@ func rotate_right(event: InputEvent, monitor: String) -> void:
                 get_parent().monitors[monitor] = 0
             else:
                 get_parent().monitors[monitor] += 1
+
+func random_path() -> Array[String]:
+    var cat = companies.keys().pick_random()
+    var cmp = companies[cat].keys().pick_random()
+    var stck = companies[cat][cmp]
+    return [cat, cmp, stck]
