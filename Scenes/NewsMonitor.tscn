@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c6m1c80mt3uhs" path="res://Scenes/news_monitor.gd" id="1_0d1ha"]
 [ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="1_n7lyd"]
 [ext_resource type="Material" uid="uid://c3gfbb47go130" path="res://Scripts/newsbackground.tres" id="2_c2vq5"]
+[ext_resource type="FontFile" uid="uid://kh5fu8jkvwcr" path="res://Scripts/OpenSans-SemiBold.ttf" id="3_hetjp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lfxu0"]
 size = Vector3(0.056396484, 0.14355469, 0.21484375)
@@ -28,9 +29,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
 [node name="Label3D" type="Label3D" parent="News6" unique_id=230669409]
-transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
+transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, -1.21071935e-08, 0, 0.12866147)
 text = "NEWS!"
-font_size = 106
+font = ExtResource("3_hetjp")
+font_size = 50
 
 [node name="steal" type="Label3D" parent="News6" unique_id=1529352743]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
@@ -51,9 +53,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
 [node name="Label3D" type="Label3D" parent="News5" unique_id=1377959834]
-transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
+transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, -1.21071935e-08, 0, 0.12866147)
 text = "NEWS!"
-font_size = 106
+font = ExtResource("3_hetjp")
+font_size = 50
 
 [node name="steal" type="Label3D" parent="News5" unique_id=1053733766]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
@@ -74,9 +77,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
 [node name="Label3D" type="Label3D" parent="News4" unique_id=2146538794]
-transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
+transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, -1.21071935e-08, 0, 0.12866147)
 text = "NEWS!"
-font_size = 106
+font = ExtResource("3_hetjp")
+font_size = 50
 
 [node name="steal" type="Label3D" parent="News4" unique_id=2037148880]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
@@ -97,9 +101,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
 [node name="Label3D" type="Label3D" parent="News3" unique_id=655779043]
-transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
+transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, -1.21071935e-08, 0, 0.12866147)
 text = "NEWS!"
-font_size = 106
+font = ExtResource("3_hetjp")
+font_size = 50
 
 [node name="steal" type="Label3D" parent="News3" unique_id=485746854]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
@@ -120,9 +125,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
 [node name="Label3D" type="Label3D" parent="News2" unique_id=1410403878]
-transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
+transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, -1.21071935e-08, 0, 0.12866147)
 text = "NEWS!"
-font_size = 106
+font = ExtResource("3_hetjp")
+font_size = 50
 
 [node name="steal" type="Label3D" parent="News2" unique_id=1934332793]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
@@ -143,9 +149,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
 shape = SubResource("BoxShape3D_lfxu0")
 
 [node name="Label3D" type="Label3D" parent="News1" unique_id=1054295146]
-transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, 0, 0, 0.40130532)
+transform = Transform3D(-8.393341e-09, 4.2117388e-15, 0.19201736, 8.393351e-09, 0.19201739, -3.8448532e-15, -0.19201727, 8.393356e-09, -8.393346e-09, -1.21071935e-08, 0, 0.12866147)
 text = "NEWS!"
-font_size = 106
+font = ExtResource("3_hetjp")
+font_size = 50
 
 [node name="steal" type="Label3D" parent="News1" unique_id=1408688818]
 transform = Transform3D(-1.3030173e-08, 6.538479e-15, 0.29809576, 1.30301885e-08, 0.2980958, -5.9689103e-15, -0.2980956, 1.3030196e-08, -1.3030179e-08, 0, 0, -0.3853689)
@@ -163,3 +170,10 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.03
 
 [node name="MonitorCo" type="CollisionShape3D" parent="MonitorCollider" unique_id=2129454206]
 shape = SubResource("BoxShape3D_hjb8m")
+
+[connection signal="input_event" from="News6" to="." method="_on_news_6_input_event"]
+[connection signal="input_event" from="News5" to="." method="_on_news_5_input_event"]
+[connection signal="input_event" from="News4" to="." method="_on_news_4_input_event"]
+[connection signal="input_event" from="News3" to="." method="_on_news_3_input_event"]
+[connection signal="input_event" from="News2" to="." method="_on_news_2_input_event"]
+[connection signal="input_event" from="News1" to="." method="_on_news_1_input_event"]

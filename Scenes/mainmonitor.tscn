@@ -3,6 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dp64u681rdni6" path="res://Meshes/Monitors/InsiderTradingGame_Monitor_Large.fbx" id="1_quit7"]
 [ext_resource type="Material" uid="uid://c3gfbb47go130" path="res://Scripts/newsbackground.tres" id="2_cherd"]
 [ext_resource type="Script" uid="uid://cqwmoce2khnmj" path="res://Scenes/mainmonitor.gd" id="2_y1bdo"]
+[ext_resource type="FontFile" uid="uid://kh5fu8jkvwcr" path="res://Scripts/OpenSans-SemiBold.ttf" id="3_ktfns"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_y1bdo"]
 size = Vector2(0.255, 2.995)
@@ -20,48 +21,52 @@ script = ExtResource("2_y1bdo")
 transform = Transform3D(-2.908583e-08, 0.6654063, 2.908583e-08, 0, -2.908583e-08, 0.66540617, 0.6654062, 2.9085832e-08, 1.2713821e-15, 0, 0, 0)
 mesh = ExtResource("1_quit7")
 
-[node name="NewsSelect1" type="Node3D" parent="monitorMesh" unique_id=735819726]
+[node name="NewsSelect1" type="Node3D" parent="monitorMesh" unique_id=265516285]
+transform = Transform3D(0.99999994, -3.5527137e-15, 0, 3.5527137e-15, 0.99999994, -3.5527137e-15, 0, 3.5527137e-15, 0.9999999, 3.9779876e-23, -1.5030375e-08, 0.3438549)
 
-[node name="Label3D" type="Label3D" parent="monitorMesh/NewsSelect1" unique_id=556468946]
-transform = Transform3D(5.339165e-15, 0, 1, 1, -8.742278e-08, -8.008747e-15, 8.742277e-08, 1, 2.6695815e-15, 0.035200585, -1.4404773, -6.296527e-08)
+[node name="Label3D" type="Label3D" parent="monitorMesh/NewsSelect1" unique_id=32324576]
+transform = Transform3D(-3.5527137e-15, 4.2351647e-22, 0.9999997, 0.99999976, -8.742278e-08, 7.1054274e-15, 8.742276e-08, 1, 2.6695806e-15, 0.035200533, -0.284294, 0)
 text = "NEWS!!!"
+font = ExtResource("3_ktfns")
+font_size = 15
 
-[node name="Label3D2" type="Label3D" parent="monitorMesh/NewsSelect1" unique_id=526130615]
+[node name="Label3D2" type="Label3D" parent="monitorMesh/NewsSelect1" unique_id=810820425]
 transform = Transform3D(-0.0016790481, 0.0006329244, 0.82281554, 0.8228054, -0.004133033, 0.0016822114, 0.0041343197, 0.8228069, -0.00062446785, 0.035200585, 1.5163035, 6.62797e-08)
-text = "BUTTON!"
+text = "USE"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="monitorMesh/NewsSelect1" unique_id=1235761986]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="monitorMesh/NewsSelect1" unique_id=827212315]
 transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.3711385e-08, 0.022219976, -0.335461, -1.4663459e-08)
 mesh = SubResource("PlaneMesh_y1bdo")
 surface_material_override/0 = ExtResource("2_cherd")
 
-[node name="Area3D" type="Area3D" parent="monitorMesh/NewsSelect1" unique_id=46797575]
+[node name="Area3D" type="Area3D" parent="monitorMesh/NewsSelect1" unique_id=1570435253]
 transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.3711385e-08, 0.022219976, -0.335461, -1.4663458e-08)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="monitorMesh/NewsSelect1/Area3D" unique_id=508204715]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="monitorMesh/NewsSelect1/Area3D" unique_id=2105385753]
 transform = Transform3D(1, -1.2743169e-36, 0, -9.345272e-37, 1, 0, 6.5645053e-20, 3.91275e-27, 1, -9.992007e-16, 0.010742189, -1.8503114)
 shape = SubResource("BoxShape3D_lfxu0")
 
-[node name="NewsSelect2" type="Node3D" parent="monitorMesh" unique_id=265516285]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5030375e-08, 0.34385493)
+[node name="NewsSelect2" type="Node3D" parent="monitorMesh" unique_id=735819726]
 
-[node name="Label3D" type="Label3D" parent="monitorMesh/NewsSelect2" unique_id=32324576]
-transform = Transform3D(5.339165e-15, 0, 1, 1, -8.742278e-08, -8.008747e-15, 8.742277e-08, 1, 2.6695815e-15, 0.035200585, -1.4404773, -6.296527e-08)
+[node name="Label3D" type="Label3D" parent="monitorMesh/NewsSelect2" unique_id=556468946]
+transform = Transform3D(-7.1054274e-15, 0, 0.99999976, 0.99999976, -8.742278e-08, -1.0658141e-14, 8.742275e-08, 0.9999997, 2.6695802e-15, 0.035200533, -0.28429398, -1.8380426e-08)
 text = "NEWS!!!"
+font = ExtResource("3_ktfns")
+font_size = 15
 
-[node name="Label3D2" type="Label3D" parent="monitorMesh/NewsSelect2" unique_id=810820425]
+[node name="Label3D2" type="Label3D" parent="monitorMesh/NewsSelect2" unique_id=526130615]
 transform = Transform3D(-0.0016790481, 0.0006329244, 0.82281554, 0.8228054, -0.004133033, 0.0016822114, 0.0041343197, 0.8228069, -0.00062446785, 0.035200585, 1.5163035, 6.62797e-08)
-text = "BUTTON!"
+text = "USE"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="monitorMesh/NewsSelect2" unique_id=827212315]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="monitorMesh/NewsSelect2" unique_id=1235761986]
 transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.3711385e-08, 0.022219976, -0.335461, -1.4663459e-08)
 mesh = SubResource("PlaneMesh_y1bdo")
 surface_material_override/0 = ExtResource("2_cherd")
 
-[node name="Area3D" type="Area3D" parent="monitorMesh/NewsSelect2" unique_id=1570435253]
+[node name="Area3D" type="Area3D" parent="monitorMesh/NewsSelect2" unique_id=46797575]
 transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.3711385e-08, 0.022219976, -0.335461, -1.4663458e-08)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="monitorMesh/NewsSelect2/Area3D" unique_id=2105385753]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="monitorMesh/NewsSelect2/Area3D" unique_id=508204715]
 transform = Transform3D(1, -1.2743169e-36, 0, -9.345272e-37, 1, 0, 6.5645053e-20, 3.91275e-27, 1, -9.992007e-16, 0.010742189, -1.8503114)
 shape = SubResource("BoxShape3D_lfxu0")
 
@@ -69,12 +74,14 @@ shape = SubResource("BoxShape3D_lfxu0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4713138e-08, -0.3365974)
 
 [node name="Label3D" type="Label3D" parent="monitorMesh/NewsSelect3" unique_id=532448516]
-transform = Transform3D(5.339165e-15, 0, 1, 1, -8.742278e-08, -8.008747e-15, 8.742277e-08, 1, 2.6695815e-15, 0.035200585, -1.4404773, -6.296527e-08)
+transform = Transform3D(-7.1054274e-15, 0, 0.99999976, 0.99999976, -8.742278e-08, -1.0658141e-14, 8.742275e-08, 0.9999997, 2.6695802e-15, 0.035200533, -0.28429398, 0)
 text = "NEWS!!!"
+font = ExtResource("3_ktfns")
+font_size = 15
 
 [node name="Label3D2" type="Label3D" parent="monitorMesh/NewsSelect3" unique_id=2046531116]
 transform = Transform3D(-0.0016790481, 0.0006329244, 0.82281554, 0.8228054, -0.004133033, 0.0016822114, 0.0041343197, 0.8228069, -0.00062446785, 0.035200585, 1.5163035, 6.62797e-08)
-text = "BUTTON!"
+text = "USE"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="monitorMesh/NewsSelect3" unique_id=1545386978]
 transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.3711385e-08, 0.022219976, -0.335461, -1.4663459e-08)
@@ -93,3 +100,7 @@ transform = Transform3D(-2.908583e-08, 0.6654063, 2.908583e-08, 0, -2.908583e-08
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorCollider" unique_id=1027426873]
 shape = SubResource("BoxShape3D_hjb8m")
+
+[connection signal="input_event" from="monitorMesh/NewsSelect1/Area3D" to="." method="_on_area_3d_input_event_1"]
+[connection signal="input_event" from="monitorMesh/NewsSelect2/Area3D" to="." method="_on_area_3d_input_event_2"]
+[connection signal="input_event" from="monitorMesh/NewsSelect3/Area3D" to="." method="_on_area_3d_input_event_3"]

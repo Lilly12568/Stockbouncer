@@ -65,7 +65,7 @@ func _on_buy_push(camera: Node, event: InputEvent, event_position: Vector3, norm
 					Variables.monitors["3"] = 0
 				elif len(Variables.unlocked) >= 4 and Variables.monitors["4"] == null:
 					Variables.monitors["4"] = 0
-				await get_tree().create_timer(0.01).timeout
+				await get_tree().create_timer(5).timeout
 				$"?".visible = true
 				$Code.visible = false
 				$Company.visible = false
