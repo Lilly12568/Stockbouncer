@@ -62,8 +62,8 @@ transform = Transform3D(0.30741554, 0.25797594, 1.1276487e-08, -7.050294e-16, -1
 material_override = ExtResource("2_jjvhh")
 mesh = ExtResource("3_kry3j")
 
-[node name="InsiderTradingGameMonitor2" parent="." unique_id=1108968398 instance=ExtResource("4_cbgmd")]
-transform = Transform3D(0.8797405, 0.074398525, -0.5515965, -0.10784443, 1.0349178, -0.032412756, 0.5460434, 0.084533244, 0.8822857, -1.3300515, 3.0161443, -1.7347894)
+[node name="NewsMonitor" parent="." unique_id=1108968398 instance=ExtResource("4_cbgmd")]
+transform = Transform3D(0.55496377, 0.19609015, 0.85866255, -0.07278685, 1.021638, -0.18626532, -0.8777556, 0.03926033, 0.558338, -1.2724122, 3.003641, -1.6973099)
 
 [node name="MainMonitor" parent="." unique_id=1031749076 instance=ExtResource("5_cbgmd")]
 transform = Transform3D(-3.818109e-08, -0.7812615, 0.5840615, -6.413626e-08, 0.5840616, 0.78126144, -0.9754472, 8.488133e-09, -4.3688495e-08, -0.478275, 1.7580156, -0.015014768)
@@ -79,6 +79,11 @@ surface_material_override/0 = ExtResource("6_6iyac")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=137130169]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1820068, -0.57945836, 0)
+material_override = ExtResource("6_6iyac")
+mesh = SubResource("BoxMesh_r6c0r")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=1431066062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1820068, 9.033796, 0)
 material_override = ExtResource("6_6iyac")
 mesh = SubResource("BoxMesh_r6c0r")
 
@@ -124,9 +129,9 @@ camera = NodePath("../Player2/Camera3D")
 
 [node name="Panel" type="Panel" parent="Control" unique_id=1407529355]
 layout_mode = 0
-offset_left = 15.160004
+offset_left = 17.160004
 offset_top = 7.0
-offset_right = 628.16003
+offset_right = 630.16003
 offset_bottom = 47.0
 
 [node name="Label" type="Label" parent="Control/Panel" unique_id=1319572698]

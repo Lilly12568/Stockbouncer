@@ -101,10 +101,14 @@ func _update_sway(delta: float) -> void:
 	sway.x = clampf(sway.x, -max_pitch, max_pitch)
 
 
-func LerpCamToPos(target: Node3D):
+func LerpCamToPos(target: Node3D, extra_offset: float = 0):
 	camera_inSound.pitch_scale = RandomNumberGenerator.new().randf_range(0.8, 1.2)
 	camera_inSound.play()
-	target_position = target.global_position + target.global_basis.z * z_offset
+	if !extra_offset:
+		target_position = target.global_position + target.global_basis.z * z_offset
+	else:
+		target_position = target.global_position + target.global_basis.z * (z_offset + extra_offset)
+	
 	target_rotation = target.global_basis.get_rotation_quaternion()
 
 	returning = false

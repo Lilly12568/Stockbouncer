@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://43kr82ecvhxv"]
 
+[ext_resource type="Script" uid="uid://c6m1c80mt3uhs" path="res://Scenes/news_monitor.gd" id="1_0d1ha"]
 [ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="1_n7lyd"]
 [ext_resource type="Material" uid="uid://c3gfbb47go130" path="res://Scripts/newsbackground.tres" id="2_c2vq5"]
 
@@ -9,14 +10,18 @@ size = Vector3(0.056396484, 0.14355469, 0.21484375)
 [sub_resource type="PlaneMesh" id="PlaneMesh_lfxu0"]
 size = Vector2(0.255, 1.18)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hjb8m"]
+size = Vector3(0.10253906, 1.9904785, 1.2695313)
+
 [node name="NewsMonitor" type="Node3D" unique_id=2003289531]
+script = ExtResource("1_0d1ha")
 
 [node name="MonitorMesh" type="MeshInstance3D" parent="." unique_id=1108968398]
-transform = Transform3D(1.4194196, 0, 0, 0, -6.2044776e-08, 1.4194199, 0, -1.419419, -6.204481e-08, 0, 0, 0)
+transform = Transform3D(-6.20448e-08, 1.4194189, 6.2044805e-08, 0, -6.204477e-08, 1.4194198, 1.4194195, 6.204477e-08, 2.7120646e-15, 0.036116973, 0, -0.036116973)
 mesh = ExtResource("1_n7lyd")
 
 [node name="News1" type="Area3D" parent="." unique_id=751143916]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048155963, 0.77110696, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, 0.77110696, 0.012038991)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="News1" unique_id=33187635]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
@@ -39,7 +44,7 @@ mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
 [node name="News2" type="Area3D" parent="." unique_id=243564482]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048155963, 0.4734416, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, 0.4734416, 0.012038991)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="News2" unique_id=390971307]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
@@ -62,7 +67,7 @@ mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
 [node name="News3" type="Area3D" parent="." unique_id=446481043]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048155963, 0.16395009, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, 0.16395009, 0.012038991)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="News3" unique_id=1601134570]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
@@ -85,7 +90,7 @@ mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
 [node name="News4" type="Area3D" parent="." unique_id=1754544087]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048155963, -0.15966946, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, -0.15966946, 0.012038991)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="News4" unique_id=1071815137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
@@ -108,7 +113,7 @@ mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
 [node name="News5" type="Area3D" parent="." unique_id=1912981850]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048155963, -0.46027362, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, -0.46027362, 0.012038991)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="News5" unique_id=66440351]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
@@ -131,7 +136,7 @@ mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
 
 [node name="News6" type="Area3D" parent="." unique_id=1599937610]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.048155963, -0.76941407, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, -0.76941407, 0.012038991)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="News6" unique_id=194125143]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39257813)
@@ -152,3 +157,9 @@ font_size = 47
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.0044454634, 0, 0)
 mesh = SubResource("PlaneMesh_lfxu0")
 surface_material_override/0 = ExtResource("2_c2vq5")
+
+[node name="MonitorCollider" type="Area3D" parent="." unique_id=1673363292]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.036116973, 0, -0.036116973)
+
+[node name="MonitorCo" type="CollisionShape3D" parent="MonitorCollider" unique_id=2129454206]
+shape = SubResource("BoxShape3D_hjb8m")
