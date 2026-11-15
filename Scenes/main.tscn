@@ -26,6 +26,7 @@
 [ext_resource type="Material" uid="uid://t3hr1q8fdms" path="res://hulahoop.tres" id="22_gt3je"]
 [ext_resource type="Texture2D" uid="uid://ctt65wbqn3mgj" path="res://exascript.jpeg" id="24_3pmx8"]
 [ext_resource type="PackedScene" uid="uid://co2un41yeib3k" path="res://side_monitor.tscn" id="26_cbgmd"]
+[ext_resource type="Script" uid="uid://dq0pxjmut0dg3" path="res://Scenes/tutorial.gd" id="27_1w6v2"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
@@ -39,6 +40,11 @@ size = Vector3(8.749756, 0.30773926, 17.376709)
 albedo_texture = ExtResource("24_3pmx8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_lfxu0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1w6v2"]
+font_size = 31
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Node3D" type="Node3D" unique_id=1869916815]
 script = ExtResource("1_6bp64")
@@ -211,6 +217,23 @@ mesh = SubResource("PlaneMesh_lfxu0")
 
 [node name="SideMonitor" parent="." unique_id=1875316352 instance=ExtResource("26_cbgmd")]
 transform = Transform3D(-0.85748404, -0.4162019, 0.30248493, -0.07800423, 0.68627447, 0.7231477, -0.50856316, 0.5964926, -0.6209351, -0.0055897236, 1.9763007, 2.0445423)
+
+[node name="Tutorial" type="Control" parent="." unique_id=1270351893]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("27_1w6v2")
+
+[node name="Label" type="Label" parent="Tutorial" unique_id=135950641]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 15.0
+offset_right = 517.0
+offset_bottom = 327.3
+text = "TUTORIAL TEXT"
+label_settings = SubResource("LabelSettings_1w6v2")
+autowrap_mode = 3
 
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="days_timer" to="." method="_on_days_timer"]
