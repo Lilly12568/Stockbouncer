@@ -166,21 +166,21 @@ transform = Transform3D(0.8962992, -0.37218633, 0.24109171, 0.40212303, 0.911339
 light_color = Color(0.5273721, 0.45509428, 0.15774655, 1)
 light_energy = 30.0
 
-[node name="MonitorTemplate" parent="." unique_id=1320213197 instance=ExtResource("10_hptm8")]
-transform = Transform3D(-4.371139e-08, 0.034333088, 0.99941045, 0, 0.99941045, -0.034333088, -1, -1.5007475e-09, -4.3685617e-08, -1.5289158, 3.5909796, -0.27271783)
-script = ExtResource("11_d1ilt")
-
-[node name="MonitorTemplate2" parent="." unique_id=163909348 instance=ExtResource("10_hptm8")]
+[node name="Monitor4" parent="." unique_id=163909348 instance=ExtResource("10_hptm8")]
 transform = Transform3D(-0.3081619, 0.11406969, 0.94447035, 0.0058342777, 0.99299324, -0.11802651, -0.951316, -0.030860968, -0.30666822, -1.4308525, 3.654914, 1.1815956)
-script = ExtResource("12_6iyac")
+script = ExtResource("14_jkdf5")
 
-[node name="MonitorTemplate3" parent="." unique_id=680070277 instance=ExtResource("10_hptm8")]
-transform = Transform3D(-0.381093, 0, 0.9245367, 0, 1, 0, -0.9245367, 0, -0.381093, -1.2855372, 2.5585117, 1.3844674)
+[node name="Monitor3" parent="." unique_id=1320213197 instance=ExtResource("10_hptm8")]
+transform = Transform3D(-4.371139e-08, 0.034333088, 0.99941045, 0, 0.99941045, -0.034333088, -1, -1.5007475e-09, -4.3685617e-08, -1.5289158, 3.5909796, -0.27271783)
 script = ExtResource("13_fdnlq")
 
-[node name="MonitorTemplate4" parent="." unique_id=548838214 instance=ExtResource("10_hptm8")]
+[node name="Monitor2" parent="." unique_id=680070277 instance=ExtResource("10_hptm8")]
+transform = Transform3D(-0.381093, 0, 0.9245367, 0, 1, 0, -0.9245367, 0, -0.381093, -1.2855372, 2.5585117, 1.3844674)
+script = ExtResource("12_6iyac")
+
+[node name="Monitor1" parent="." unique_id=548838214 instance=ExtResource("10_hptm8")]
 transform = Transform3D(0.020705432, 0, 0.9997856, 0, 1, 0, -0.9997856, 0, 0.020705432, -1.5126243, 2.5585117, -0.070457816)
-script = ExtResource("14_jkdf5")
+script = ExtResource("11_d1ilt")
 
 [node name="InsiderTradingGameCable2" type="MeshInstance3D" parent="." unique_id=183404477]
 transform = Transform3D(0.012596332, -0.25886226, 0.15606344, 0.30183566, 0.019115929, 0.0073455535, -0.016146466, 0.15539965, 0.25906444, -1.4881909, 2.6479506, 1.3539718)

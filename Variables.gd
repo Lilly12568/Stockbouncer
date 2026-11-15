@@ -206,7 +206,7 @@ func start() -> void:
 	for cat in companies:
 		for cmp in companies[cat]:
 			stocks[companies[cat][cmp]] = round_to_decimal(rng.randf_range(100, 1000), 2)
-			history[companies[cat][cmp]] = [stocks[companies[cat][cmp]]]
+			history[companies[cat][cmp]] = [[stocks[companies[cat][cmp]], "none"]]
 
 func tick_stocks() -> void:
 	var blocked_stocks = tick_stories()
@@ -225,12 +225,6 @@ func tick_stocks() -> void:
 		history[stock].append([stocks[stock], mvmt])
 		if len(history[stock]) > 15:
 			history[stock].pop_front()
-	#print(stocks)
-	#print(history)
-	var prnt = """"""
-	for stock in stocks:
-		prnt += stock + ": " + str(stocks[stock]) + "\n"
-	#print(prnt)
 
 func tick_stories() -> Array:
 	var blocked_stocks = []

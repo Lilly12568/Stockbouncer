@@ -13,6 +13,8 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	Variables.tick_stocks()
+	for i in range(1, 5):
+		$".".get_node("Monitor%d" % i).refresh_screen()
 
 
 func _on_days_timer() -> void:

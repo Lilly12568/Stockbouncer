@@ -198,7 +198,7 @@ text = "<         >"
 font_size = 21
 
 [node name="CurrentPrice" type="Label3D" parent="Screen" unique_id=1290147401]
-transform = Transform3D(8.179732e-16, -0.42810464, -1.8713045e-08, -1.8713045e-08, -1.8713047e-08, 0.42810458, -0.42810458, -9.0654665e-23, -1.8713045e-08, 0.37574607, 0.0083590895, 0.00015544707)
+transform = Transform3D(8.179732e-16, -0.42810464, -1.8713045e-08, -1.8713045e-08, -1.8713047e-08, 0.42810458, -0.42810458, -9.0654665e-23, -1.8713045e-08, 0.375, 0.008, 0)
 text = "[PRICE]"
 
 [node name="Label3D4" type="Label3D" parent="Screen" unique_id=697464217]
