@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://1pcsbs1mhrsg" path="res://Meshes/Speaker/M_Speaker.tres" id="2_jjvhh"]
 [ext_resource type="ArrayMesh" uid="uid://dntvowk5u7fhx" path="res://Meshes/Speaker/InsiderTradingGame_Speaker.fbx" id="3_kry3j"]
 [ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="4_jjvhh"]
-[ext_resource type="ArrayMesh" uid="uid://dp64u681rdni6" path="res://Meshes/Monitors/InsiderTradingGame_Monitor_Large.fbx" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://da1ujk5wh3sc3" path="res://Scenes/mainmonitor.tscn" id="5_cbgmd"]
 [ext_resource type="Script" uid="uid://cg1xcrc5ym7d8" path="res://Scenes/camera_3d.gd" id="6_6bp64"]
 [ext_resource type="Material" uid="uid://bnieva1vfiwvm" path="res://new_standard_material_3d.tres" id="6_6iyac"]
 [ext_resource type="ArrayMesh" uid="uid://bh6on7fwpbktl" path="res://Meshes/Desk/InsiderTradingGame_Desk.fbx" id="6_21xkr"]
@@ -25,6 +25,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bfne435qxfge7" path="res://hoopy.fbx" id="22_ee4r6"]
 [ext_resource type="Material" uid="uid://t3hr1q8fdms" path="res://hulahoop.tres" id="22_gt3je"]
 [ext_resource type="Texture2D" uid="uid://ctt65wbqn3mgj" path="res://exascript.jpeg" id="24_3pmx8"]
+[ext_resource type="PackedScene" uid="uid://co2un41yeib3k" path="res://side_monitor.tscn" id="26_cbgmd"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lfxu0"]
 
@@ -56,9 +57,8 @@ mesh = ExtResource("3_kry3j")
 transform = Transform3D(1.2029198, 0.75209045, -0.045775834, 0.02634782, 0.044194266, 1.418487, 0.7530218, -1.2029784, 0.023492843, -1.3300515, 3.0161443, -1.7347894)
 mesh = ExtResource("4_jjvhh")
 
-[node name="InsiderTradingGameMonitorLarge" type="MeshInstance3D" parent="." unique_id=956288831]
-transform = Transform3D(0.3984205, 2.808772e-08, -0.53294134, 0.53294134, -7.554172e-09, 0.3984205, 1.0767546e-08, -0.6654062, -2.7019352e-08, -0.478275, 1.7580156, -0.015014768)
-mesh = ExtResource("5_kry3j")
+[node name="MainMonitor" parent="." unique_id=1031749076 instance=ExtResource("5_cbgmd")]
+transform = Transform3D(0.39842045, 1.1670317e-08, -0.53294134, 0.53294134, -2.3295609e-08, 0.39842045, -1.1670316e-08, -0.6654062, -2.3295607e-08, -0.478275, 1.7580156, -0.015014768)
 
 [node name="Player" type="MeshInstance3D" parent="." unique_id=2034706867]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4180007, 0, 0.0012354851)
@@ -199,5 +199,8 @@ surface_material_override/0 = ExtResource("22_gt3je")
 transform = Transform3D(-0.10806449, 0.24128677, 0.17621835, 1.1312533e-08, 0.14941858, -0.32737356, -0.27861395, -0.09358659, -0.06834887, -1.9783243, 1.641745, 1.3885418)
 material_override = SubResource("StandardMaterial3D_u50mg")
 mesh = SubResource("PlaneMesh_lfxu0")
+
+[node name="SideMonitor" parent="." unique_id=1875316352 instance=ExtResource("26_cbgmd")]
+transform = Transform3D(-0.85748404, -0.4162019, 0.30248493, -0.07800423, 0.68627447, 0.7231477, -0.50856316, 0.5964926, -0.6209351, -0.0055897236, 1.9763007, 2.0445423)
 
 [connection signal="timeout" from="refresh_stocks" to="." method="_on_timer_timeout"]

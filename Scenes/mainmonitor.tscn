@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://da1ujk5wh3sc3"]
+
+[ext_resource type="ArrayMesh" uid="uid://dp64u681rdni6" path="res://Meshes/Monitors/InsiderTradingGame_Monitor_Large.fbx" id="1_quit7"]
+
+[node name="InsiderTradingGameMonitorLarge" type="MeshInstance3D" unique_id=1031749076]
+transform = Transform3D(0.3984205, 2.808772e-08, -0.53294134, 0.53294134, -7.554172e-09, 0.3984205, 1.0767546e-08, -0.6654062, -2.7019352e-08, 0, 0, 0)
+mesh = ExtResource("1_quit7")

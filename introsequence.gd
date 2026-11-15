@@ -21,7 +21,7 @@ func _ready():
 	play_sequence()
 
 func _process(delta):
-	if Input.is_key_pressed(keycode: F):
+	if Input.is_key_pressed(KEY_F):
 		get_tree().change_scene_to_file(next_scene)
 
 

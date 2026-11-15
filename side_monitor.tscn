@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://co2un41yeib3k"]
+
+[ext_resource type="Script" uid="uid://cxgt7y3u0517h" path="res://side_monitor.gd" id="1_vrefm"]
+[ext_resource type="ArrayMesh" uid="uid://0fxunyibuksi" path="res://Meshes/Monitors/Normal/InsiderTradingGame_Monitor.fbx" id="2_172jn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lfxu0"]
+size = Vector3(0.04045105, 0.939209, 1.5087891)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lfxu0"]
+size = Vector2(0.49, 0.24)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hjb8m"]
+size = Vector3(0.1930542, 0.09814453, 0.06744385)
+
+[node name="SideMonitor" type="Node3D" unique_id=1320213197]
+script = ExtResource("1_vrefm")
+
+[node name="MonitorCollider" type="Area3D" parent="." unique_id=181928770]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="MonitorCollider" type="CollisionShape3D" parent="MonitorCollider" unique_id=2004849164]
+transform = Transform3D(1, 0, -5.5879354e-08, 0, 1, 0, 5.5879354e-08, 0, 1, 0.051063538, 0, 2.8533975e-09)
+shape = SubResource("BoxShape3D_lfxu0")
+
+[node name="MonitorMesh" type="MeshInstance3D" parent="." unique_id=2021709276]
+transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.3711392e-08, 0, 0, 0)
+mesh = ExtResource("2_172jn")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=2017293323]
+transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.3240806, 0.36565888, 0.03441843)
+text = "NEXT PAYMENT:
+"
+font_size = 35
+
+[node name="Label3D4" type="Label3D" parent="." unique_id=908913002]
+transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.32481062, 0.25647083, 0.03441843)
+text = "[AMOUNT]"
+font_size = 65
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=120702823]
+transform = Transform3D(0.33332628, 0, 0, 0, 0.33332628, 0, 0, 0, 0.33332628, -0.36339933, 0.36020494, 0.03441843)
+text = "UNLOCK NEW STOCK:"
+
+[node name="Label3D10" type="Label3D" parent="." unique_id=476387566]
+transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.36339933, -0.070890784, 0.03441843)
+text = "PRICE:"
+
+[node name="Label3D11" type="Label3D" parent="." unique_id=1502770171]
+transform = Transform3D(0.49665377, 0, 0, 0, 0.49665377, 0, 0, 0, 0.49665377, -0.36339933, -0.17932308, 0.03441843)
+text = "[AMOUNT]"
+
+[node name="Label3D12" type="Label3D" parent="." unique_id=1151414985]
+transform = Transform3D(0.49665377, 0, 0, 0, 0.49665377, 0, 0, 0, 0.49665377, -0.36339933, -0.31673768, 0.03441843)
+text = "BUY"
+
+[node name="Label3D7" type="Label3D" parent="." unique_id=96368238]
+transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.36339933, 0.0909884, 0.03441843)
+text = "[COMPANY NAME]"
+
+[node name="Label3D8" type="Label3D" parent="." unique_id=2125450149]
+transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.2709049, 0.19020718, 0.03441843)
+text = "[CODE]"
+
+[node name="Label3D9" type="Label3D" parent="." unique_id=1416241583]
+transform = Transform3D(0.3051948, 0, 0, 0, 0.3051948, 0, 0, 0, 0.3051948, -0.483831, 0.19020718, 0.03441843)
+text = "[ICON]"
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=215576475]
+transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.3314023, 0.13253333, 0.03441843)
+text = "IN [X] DAYS"
+font_size = 35
+
+[node name="Label3D5" type="Label3D" parent="." unique_id=1536103065]
+transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.3240806, -0.17352012, 0.03441843)
+text = "BALANCE:"
+font_size = 35
+
+[node name="Label3D6" type="Label3D" parent="." unique_id=1638477759]
+transform = Transform3D(0.3512941, 0, 0, 0, 0.3512941, 0, 0, 0, 0.3512941, 0.32481062, -0.29764524, 0.03441843)
+text = "[AMOUNT]"
+font_size = 65
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1838491069]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.36882216, 0.1329321, 0.033578828)
+mesh = SubResource("PlaneMesh_lfxu0")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=257701280]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1636103950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3544889, -0.3209684, 0.034698486)
+shape = SubResource("BoxShape3D_hjb8m")

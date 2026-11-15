@@ -20,6 +20,17 @@ offset_bottom = 171.0
 text = "Hey kid..."
 label_settings = SubResource("LabelSettings_lfxu0")
 
+[node name="SkipPrompt" type="Label" parent="." unique_id=514676140]
+z_index = 1
+layout_mode = 0
+offset_left = 57.0
+offset_top = 581.0
+offset_right = 606.0
+offset_bottom = 683.0
+scale = Vector2(0.43598008, 0.43598008)
+text = "Press F to skip"
+label_settings = SubResource("LabelSettings_lfxu0")
+
 [node name="Background" type="ColorRect" parent="." unique_id=18102236]
 layout_mode = 0
 offset_right = 1168.0
