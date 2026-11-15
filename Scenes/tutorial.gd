@@ -13,7 +13,7 @@ var dialogue = [
 	"Start by unlocking a company on the leftmost screen.",
 	"The first one is free!",
 	"Follow stock prices on the four screens in front.",
-	"Buy or sell stock prices by clicking on the screens.",
+	"Buy or sell stocks by clicking on the screens.",
 	"See upcoming news broadcasts on the screen on the right!",
 	"Steal news broadcasts and make them your own!",
 	"Earn enough to pay back your loans.",
